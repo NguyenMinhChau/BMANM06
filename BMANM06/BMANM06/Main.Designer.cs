@@ -70,7 +70,7 @@ namespace BMANM06
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Demo RSA & Vigenere ";
+            this.Text = "Demo RSA & Vigenere | BMANM06_COMP104901 ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -180,7 +180,7 @@ namespace BMANM06
             this.Controls.Add(this.label1);
             this.Name = "Vigenere";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vigenere";
+            this.Text = "Vigenere | BMANM06_COMP104901";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vigenere_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

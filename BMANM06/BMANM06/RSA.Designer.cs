@@ -46,6 +46,7 @@ namespace BMANM06
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelNotifiupdate = new System.Windows.Forms.Label();
             this.labelNotifi = new System.Windows.Forms.Label();
             this.progressBarEnDe = new System.Windows.Forms.ProgressBar();
             this.btnDecrypt = new System.Windows.Forms.Button();
@@ -72,7 +73,6 @@ namespace BMANM06
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
-            this.labelNotifiupdate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -256,6 +256,15 @@ namespace BMANM06
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // labelNotifiupdate
+            // 
+            this.labelNotifiupdate.AutoSize = true;
+            this.labelNotifiupdate.Location = new System.Drawing.Point(12, 280);
+            this.labelNotifiupdate.Name = "labelNotifiupdate";
+            this.labelNotifiupdate.Size = new System.Drawing.Size(87, 20);
+            this.labelNotifiupdate.TabIndex = 14;
+            this.labelNotifiupdate.Text = "Thông báo";
+            // 
             // labelNotifi
             // 
             this.labelNotifi.AutoSize = true;
@@ -278,7 +287,7 @@ namespace BMANM06
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(112, 34);
             this.btnDecrypt.TabIndex = 11;
-            this.btnDecrypt.Text = "Giải mã";
+            this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseVisualStyleBackColor = true;
             this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
@@ -288,7 +297,7 @@ namespace BMANM06
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(112, 34);
             this.btnEncrypt.TabIndex = 10;
-            this.btnEncrypt.Text = "Mã hóa";
+            this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseVisualStyleBackColor = true;
             this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
@@ -448,7 +457,7 @@ namespace BMANM06
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 34);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Kiểm tra";
+            this.button3.Text = "Check File";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -499,15 +508,6 @@ namespace BMANM06
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // labelNotifiupdate
-            // 
-            this.labelNotifiupdate.AutoSize = true;
-            this.labelNotifiupdate.Location = new System.Drawing.Point(12, 280);
-            this.labelNotifiupdate.Name = "labelNotifiupdate";
-            this.labelNotifiupdate.Size = new System.Drawing.Size(87, 20);
-            this.labelNotifiupdate.TabIndex = 14;
-            this.labelNotifiupdate.Text = "Thông báo";
-            // 
             // RSA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -520,7 +520,7 @@ namespace BMANM06
             this.Controls.Add(this.panel1);
             this.Name = "RSA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RSA";
+            this.Text = "RSA | BMANM06_COMP104901";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSA_FormClosing);
             this.Load += new System.EventHandler(this.RSA_Load);
             this.panel1.ResumeLayout(false);
