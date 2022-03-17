@@ -182,6 +182,7 @@ namespace BMANM06
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vigenere | BMANM06_COMP104901";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vigenere_FormClosing);
+            this.Load += new System.EventHandler(this.Vigenere_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

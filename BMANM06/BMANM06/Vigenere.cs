@@ -92,5 +92,10 @@ namespace BMANM06
                 e.Cancel = true;
             }
         }
+
+        private void Vigenere_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

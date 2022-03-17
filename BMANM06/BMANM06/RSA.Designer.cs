@@ -29,7 +29,9 @@ namespace BMANM06
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnGenerateKeyAuto = new System.Windows.Forms.Button();
             this.cbKeyLength = new System.Windows.Forms.ComboBox();
@@ -72,16 +74,44 @@ namespace BMANM06
             this.txtFileKiemtra = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnDecryptString = new System.Windows.Forms.Button();
+            this.btnEncryptString = new System.Windows.Forms.Button();
+            this.txtPlainTextStringDecrypt = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtCiphertextString = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtPlainTextString = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Controls.Add(this.panel4);
+            this.flowLayoutPanel1.Controls.Add(this.panel5);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(700, 510);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnOpenFile);
             this.panel1.Controls.Add(this.btnGenerateKeyAuto);
             this.panel1.Controls.Add(this.cbKeyLength);
@@ -90,10 +120,21 @@ namespace BMANM06
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel1.Location = new System.Drawing.Point(29, 37);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(621, 261);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(663, 175);
+            this.panel1.TabIndex = 7;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Location = new System.Drawing.Point(460, 7);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(196, 34);
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "Reset Form";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnOpenFile
             // 
@@ -103,7 +144,7 @@ namespace BMANM06
             this.btnOpenFile.TabIndex = 6;
             this.btnOpenFile.Text = "Open";
             this.btnOpenFile.UseVisualStyleBackColor = true;
-            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click_1);
             // 
             // btnGenerateKeyAuto
             // 
@@ -169,10 +210,10 @@ namespace BMANM06
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel2.Location = new System.Drawing.Point(668, 37);
+            this.panel2.Location = new System.Drawing.Point(3, 184);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 261);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(663, 261);
+            this.panel2.TabIndex = 8;
             // 
             // txtMuGiaiMa
             // 
@@ -250,11 +291,10 @@ namespace BMANM06
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel3.Location = new System.Drawing.Point(29, 329);
+            this.panel3.Location = new System.Drawing.Point(3, 451);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(663, 321);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.TabIndex = 9;
             // 
             // labelNotifiupdate
             // 
@@ -309,7 +349,7 @@ namespace BMANM06
             this.btnOpenFolder.TabIndex = 9;
             this.btnOpenFolder.Text = "Open Folder";
             this.btnOpenFolder.UseVisualStyleBackColor = true;
-            this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click);
+            this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click_1);
             // 
             // btnSelectFolderOut
             // 
@@ -319,7 +359,7 @@ namespace BMANM06
             this.btnSelectFolderOut.TabIndex = 8;
             this.btnSelectFolderOut.Text = "Select Folder";
             this.btnSelectFolderOut.UseVisualStyleBackColor = true;
-            this.btnSelectFolderOut.Click += new System.EventHandler(this.btnSelectFolderOut_Click);
+            this.btnSelectFolderOut.Click += new System.EventHandler(this.btnSelectFolderOut_Click_1);
             // 
             // btnSelectFolder
             // 
@@ -329,7 +369,7 @@ namespace BMANM06
             this.btnSelectFolder.TabIndex = 7;
             this.btnSelectFolder.Text = "Select Folder";
             this.btnSelectFolder.UseVisualStyleBackColor = true;
-            this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click);
+            this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click_1);
             // 
             // btnSelectFile
             // 
@@ -339,7 +379,7 @@ namespace BMANM06
             this.btnSelectFile.TabIndex = 6;
             this.btnSelectFile.Text = "Select File";
             this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click_1);
             // 
             // txtOutput
             // 
@@ -377,11 +417,11 @@ namespace BMANM06
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(231, 16);
+            this.label8.Location = new System.Drawing.Point(156, 18);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 25);
+            this.label8.Size = new System.Drawing.Size(297, 25);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Mã hóa và giải mã";
+            this.label8.Text = "Mã hóa và giải mã File/Folder";
             // 
             // panel4
             // 
@@ -398,10 +438,10 @@ namespace BMANM06
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel4.Location = new System.Drawing.Point(698, 329);
+            this.panel4.Location = new System.Drawing.Point(3, 778);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(557, 321);
-            this.panel4.TabIndex = 3;
+            this.panel4.Size = new System.Drawing.Size(663, 321);
+            this.panel4.TabIndex = 10;
             // 
             // txtSHA256
             // 
@@ -459,7 +499,7 @@ namespace BMANM06
             this.button3.TabIndex = 8;
             this.button3.Text = "Check File";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button1
             // 
@@ -469,7 +509,7 @@ namespace BMANM06
             this.button1.TabIndex = 7;
             this.button1.Text = "Open File";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtFileKiemtra
             // 
@@ -497,32 +537,117 @@ namespace BMANM06
             this.label11.TabIndex = 2;
             this.label11.Text = "Kiểm tra file";
             // 
-            // btnReset
+            // panel5
             // 
-            this.btnReset.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(575, 656);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(196, 34);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "Reset Form";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btnDecryptString);
+            this.panel5.Controls.Add(this.btnEncryptString);
+            this.panel5.Controls.Add(this.txtPlainTextStringDecrypt);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.txtCiphertextString);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.txtPlainTextString);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel5.Location = new System.Drawing.Point(3, 1105);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(663, 498);
+            this.panel5.TabIndex = 12;
+            // 
+            // btnDecryptString
+            // 
+            this.btnDecryptString.Location = new System.Drawing.Point(496, 341);
+            this.btnDecryptString.Name = "btnDecryptString";
+            this.btnDecryptString.Size = new System.Drawing.Size(112, 34);
+            this.btnDecryptString.TabIndex = 10;
+            this.btnDecryptString.Text = "Decrypt";
+            this.btnDecryptString.UseVisualStyleBackColor = true;
+            this.btnDecryptString.Click += new System.EventHandler(this.btnDecryptString_Click);
+            // 
+            // btnEncryptString
+            // 
+            this.btnEncryptString.Location = new System.Drawing.Point(496, 199);
+            this.btnEncryptString.Name = "btnEncryptString";
+            this.btnEncryptString.Size = new System.Drawing.Size(112, 34);
+            this.btnEncryptString.TabIndex = 9;
+            this.btnEncryptString.Text = "Encrypt";
+            this.btnEncryptString.UseVisualStyleBackColor = true;
+            this.btnEncryptString.Click += new System.EventHandler(this.btnEncryptString_Click_1);
+            // 
+            // txtPlainTextStringDecrypt
+            // 
+            this.txtPlainTextStringDecrypt.Location = new System.Drawing.Point(37, 381);
+            this.txtPlainTextStringDecrypt.Multiline = true;
+            this.txtPlainTextStringDecrypt.Name = "txtPlainTextStringDecrypt";
+            this.txtPlainTextStringDecrypt.Size = new System.Drawing.Size(571, 96);
+            this.txtPlainTextStringDecrypt.TabIndex = 8;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(37, 348);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(77, 20);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "PlainText";
+            // 
+            // txtCiphertextString
+            // 
+            this.txtCiphertextString.Location = new System.Drawing.Point(37, 240);
+            this.txtCiphertextString.Multiline = true;
+            this.txtCiphertextString.Name = "txtCiphertextString";
+            this.txtCiphertextString.Size = new System.Drawing.Size(571, 95);
+            this.txtCiphertextString.TabIndex = 6;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(39, 206);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Ciphertext";
+            // 
+            // txtPlainTextString
+            // 
+            this.txtPlainTextString.Location = new System.Drawing.Point(37, 87);
+            this.txtPlainTextString.Multiline = true;
+            this.txtPlainTextString.Name = "txtPlainTextString";
+            this.txtPlainTextString.Size = new System.Drawing.Size(569, 106);
+            this.txtPlainTextString.TabIndex = 4;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(35, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 20);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "PlainText";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(225, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(244, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Mã hóa và giải mã chuỗi";
             // 
             // RSA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 702);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(700, 510);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "RSA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RSA | BMANM06_COMP104901";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSA_FormClosing);
-            this.Load += new System.EventHandler(this.RSA_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSA_FormClosing_1);
+            this.Load += new System.EventHandler(this.RSA_Load_1);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -531,12 +656,15 @@ namespace BMANM06
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button btnGenerateKeyAuto;
@@ -546,40 +674,50 @@ namespace BMANM06
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMuGiaiMa;
+        private System.Windows.Forms.TextBox txtMuMaHoa;
         private System.Windows.Forms.TextBox txtModule;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMuGiaiMa;
-        private System.Windows.Forms.TextBox txtMuMaHoa;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtOutput;
-        private System.Windows.Forms.TextBox txtInput;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelNotifiupdate;
+        private System.Windows.Forms.Label labelNotifi;
+        private System.Windows.Forms.ProgressBar progressBarEnDe;
+        private System.Windows.Forms.Button btnDecrypt;
+        private System.Windows.Forms.Button btnEncrypt;
         private System.Windows.Forms.Button btnOpenFolder;
         private System.Windows.Forms.Button btnSelectFolderOut;
         private System.Windows.Forms.Button btnSelectFolder;
         private System.Windows.Forms.Button btnSelectFile;
-        private System.Windows.Forms.Button btnDecrypt;
-        private System.Windows.Forms.Button btnEncrypt;
-        private System.Windows.Forms.ProgressBar progressBarEnDe;
+        private System.Windows.Forms.TextBox txtOutput;
+        private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtFileKiemtra;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtSHA256;
+        private System.Windows.Forms.TextBox txtSHA1;
+        private System.Windows.Forms.TextBox txtMD5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtSHA1;
-        private System.Windows.Forms.TextBox txtMD5;
-        private System.Windows.Forms.TextBox txtSHA256;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtFileKiemtra;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnDecryptString;
+        private System.Windows.Forms.Button btnEncryptString;
+        private System.Windows.Forms.TextBox txtPlainTextStringDecrypt;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtCiphertextString;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtPlainTextString;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Label labelNotifi;
-        private System.Windows.Forms.Label labelNotifiupdate;
     }
 }

@@ -21,20 +21,13 @@ namespace BMANM06
         private RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
         private string pathKeysXML = "";
         private bool isEncryptFile = true;
+        byte[] plaintText;
+        byte[] cipherText;
         public RSA()
         {
             InitializeComponent();
         }
-
-        private void RSA_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void RSA_Load(object sender, EventArgs e)
+        private void RSA_Load_1(object sender, EventArgs e)
         {
             this.cbKeyLength.Items.Add("512 bits");
             this.cbKeyLength.Items.Add("1024 bits");
@@ -48,6 +41,14 @@ namespace BMANM06
             txtSHA256.Enabled = false;
             this.cbKeyLength.Text = "1024 bits";
             Control.CheckForIllegalCrossThreadCalls = false;
+        }
+
+        private void RSA_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
         private void enabledOrDisableButtons(bool isEnable)
         {
@@ -119,7 +120,7 @@ namespace BMANM06
             MessageBox.Show("Tạo key có độ dài " + lengthKey.ToString() + " bits thành công.");
         }
 
-        private void btnOpenFile_Click(object sender, EventArgs e)
+        private void btnOpenFile_Click_1(object sender, EventArgs e)
         {
             this.txtMuGiaiMa.Clear(); this.txtMuMaHoa.Clear(); this.txtModule.Clear();
             OpenFileDialog op = new OpenFileDialog();
@@ -157,7 +158,7 @@ namespace BMANM06
             }
         }
 
-        private void btnSelectFile_Click(object sender, EventArgs e)
+        private void btnSelectFile_Click_1(object sender, EventArgs e)
         {
             isEncryptFile = true;
             OpenFileDialog op = new OpenFileDialog();
@@ -166,7 +167,7 @@ namespace BMANM06
                 txtInput.Text = op.FileName;
         }
 
-        private void btnOpenFolder_Click(object sender, EventArgs e)
+        private void btnOpenFolder_Click_1(object sender, EventArgs e)
         {
             if (txtOutput.Text.Length > 0)
             {
@@ -325,47 +326,6 @@ namespace BMANM06
             btnEncryptDecrypt s = new btnEncryptDecrypt(btnEncryptClick);
             //s.BeginInvoke(null, null);
         }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtMD5.Enabled = false;
-            txtSHA1.Enabled = false;
-            txtSHA256.Enabled = false;
-            this.isEncryptFile = true;
-            this.txtFileKey.Clear();
-            this.txtInput.Clear();
-            this.txtModule.Clear();
-            this.txtMuGiaiMa.Clear();
-            this.txtMuMaHoa.Clear();
-            txtModule.Enabled = false;
-            txtMuMaHoa.Enabled = false;
-            txtMuGiaiMa.Enabled = false;
-            txtFileKiemtra.Clear();
-            txtMD5.Clear();
-            txtSHA1.Clear();
-            txtSHA256.Clear();
-
-            this.txtOutput.Clear();
-            this.pathKeysXML = "";
-            this.cbKeyLength.Text = "1024 bits";
-            this.labelNotifiupdate.Text = "";
-            this.labelNotifiupdate.Update();
-            rsa = new RSACryptoServiceProvider();
-            if (this.progressBarEnDe.Value > 0)
-                this.progressBarEnDe.Value = 0;
-        }
-
-        private void btnDecrypt_Click(object sender, EventArgs e)
-        {
-            if (txtOutput.Text.Length == 0)
-            {
-                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output");
-                return;
-            }
-            btnDecryptClick();
-            btnEncryptDecrypt s = new btnEncryptDecrypt(btnDecryptClick);
-            //s.BeginInvoke(null, null);
-        }
         private void btnDecryptClick()
         {
             enabledOrDisableButtons(false);
@@ -439,7 +399,19 @@ namespace BMANM06
             enabledOrDisableButtons(true);
         }
 
-        private void btnSelectFolder_Click(object sender, EventArgs e)
+        private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            if (txtOutput.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output");
+                return;
+            }
+            btnDecryptClick();
+            btnEncryptDecrypt s = new btnEncryptDecrypt(btnDecryptClick);
+            //s.BeginInvoke(null, null);
+        }
+
+        private void btnSelectFolder_Click_1(object sender, EventArgs e)
         {
             isEncryptFile = false;
             FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
@@ -479,9 +451,9 @@ namespace BMANM06
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            if(txtFileKiemtra.Text != "")
+            if (txtFileKiemtra.Text != "")
             {
                 txtMD5.Text = MD5(txtFileKiemtra.Text);
                 txtSHA1.Text = SHA1(txtFileKiemtra.Text);
@@ -492,7 +464,7 @@ namespace BMANM06
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             using (OpenFileDialog dialog = new OpenFileDialog())
             {
@@ -503,7 +475,7 @@ namespace BMANM06
             }
         }
 
-        private void btnSelectFolderOut_Click(object sender, EventArgs e)
+        private void btnSelectFolderOut_Click_1(object sender, EventArgs e)
         {
             FolderBrowserDialog f1 = new FolderBrowserDialog();
             if (f1.ShowDialog() == DialogResult.OK)
@@ -512,9 +484,61 @@ namespace BMANM06
             }
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void btnEncryptString_Click_1(object sender, EventArgs e)
         {
+            if (txtPlainTextString.Text != "")
+            {
+                plaintText = Encoding.UTF8.GetBytes(txtPlainTextString.Text);
+                cipherText = RSAEncryptionString.MaHoa(plaintText,
+                rsa.ExportParameters(false), false);
+                //txtCipherText.Text =
+                Encoding.UTF8.GetString(cipherText);
+                StringBuilder sbHash = new StringBuilder();
+                foreach (byte b in cipherText)
+                    sbHash.Append(String.Format("{0:x2}", b));
+                txtCiphertextString.Text = sbHash.ToString();
+            }
+        }
 
+        private void btnDecryptString_Click(object sender, EventArgs e)
+        {
+            if (txtCiphertextString.Text != "")
+            {
+                byte[] decryptText = RSAEncryptionString.GiaiMa(cipherText, rsa.ExportParameters(true), false);
+                txtPlainTextStringDecrypt.Text = Encoding.UTF8.GetString(decryptText);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtMD5.Enabled = false;
+            txtSHA1.Enabled = false;
+            txtSHA256.Enabled = false;
+            this.isEncryptFile = true;
+            this.txtFileKey.Clear();
+            this.txtInput.Clear();
+            this.txtModule.Clear();
+            this.txtMuGiaiMa.Clear();
+            this.txtMuMaHoa.Clear();
+            txtModule.Enabled = false;
+            txtMuMaHoa.Enabled = false;
+            txtMuGiaiMa.Enabled = false;
+            txtFileKiemtra.Clear();
+            txtMD5.Clear();
+            txtSHA1.Clear();
+            txtSHA256.Clear();
+            txtPlainTextString.Text = "";
+            txtCiphertextString.Text = "";
+            txtPlainTextStringDecrypt.Text = "";
+
+            this.txtOutput.Clear();
+            this.pathKeysXML = "";
+            this.cbKeyLength.Text = "1024 bits";
+            this.labelNotifiupdate.Text = "";
+            this.labelNotifiupdate.Update();
+            rsa = new RSACryptoServiceProvider();
+            if (this.progressBarEnDe.Value > 0)
+                this.progressBarEnDe.Value = 0;
         }
     }
 }
