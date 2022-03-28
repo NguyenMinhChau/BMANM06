@@ -462,6 +462,10 @@ namespace BMANM06
                 txtSHA1.Enabled = true;
                 txtSHA256.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn file", "Thông báo");
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -498,6 +502,10 @@ namespace BMANM06
                     sbHash.Append(String.Format("{0:x2}", b));
                 txtCiphertextString.Text = sbHash.ToString();
             }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập chuỗi cần mã hóa", "Thông báo");
+            }
         }
 
         private void btnDecryptString_Click(object sender, EventArgs e)
@@ -506,6 +514,10 @@ namespace BMANM06
             {
                 byte[] decryptText = RSAEncryptionString.GiaiMa(cipherText, rsa.ExportParameters(true), false);
                 txtPlainTextStringDecrypt.Text = Encoding.UTF8.GetString(decryptText);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo");
             }
         }
 

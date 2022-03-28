@@ -41,6 +41,8 @@ namespace BMANM06
             this.btnDecrypt = new System.Windows.Forms.Button();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.LengthPlainText = new System.Windows.Forms.Label();
+            this.LengthKey = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,6 +62,8 @@ namespace BMANM06
             this.txtKey.Name = "txtKey";
             this.txtKey.Size = new System.Drawing.Size(399, 33);
             this.txtKey.TabIndex = 1;
+            this.txtKey.TextChanged += new System.EventHandler(this.txtKey_TextChanged);
+            this.txtKey.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKey_KeyUp);
             // 
             // label2
             // 
@@ -79,6 +83,7 @@ namespace BMANM06
             this.txtPlainText.Name = "txtPlainText";
             this.txtPlainText.Size = new System.Drawing.Size(738, 88);
             this.txtPlainText.TabIndex = 3;
+            this.txtPlainText.TextChanged += new System.EventHandler(this.txtPlainText_TextChanged);
             // 
             // label3
             // 
@@ -121,9 +126,9 @@ namespace BMANM06
             // btnMaHoa
             // 
             this.btnMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMaHoa.Location = new System.Drawing.Point(654, 239);
+            this.btnMaHoa.Location = new System.Drawing.Point(649, 239);
             this.btnMaHoa.Name = "btnMaHoa";
-            this.btnMaHoa.Size = new System.Drawing.Size(112, 34);
+            this.btnMaHoa.Size = new System.Drawing.Size(117, 34);
             this.btnMaHoa.TabIndex = 8;
             this.btnMaHoa.Text = "Encrypt";
             this.btnMaHoa.UseVisualStyleBackColor = true;
@@ -132,9 +137,9 @@ namespace BMANM06
             // btnDecrypt
             // 
             this.btnDecrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDecrypt.Location = new System.Drawing.Point(654, 386);
+            this.btnDecrypt.Location = new System.Drawing.Point(649, 386);
             this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(112, 34);
+            this.btnDecrypt.Size = new System.Drawing.Size(117, 34);
             this.btnDecrypt.TabIndex = 9;
             this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseVisualStyleBackColor = true;
@@ -161,11 +166,31 @@ namespace BMANM06
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // LengthPlainText
+            // 
+            this.LengthPlainText.AutoSize = true;
+            this.LengthPlainText.Location = new System.Drawing.Point(137, 110);
+            this.LengthPlainText.Name = "LengthPlainText";
+            this.LengthPlainText.Size = new System.Drawing.Size(33, 25);
+            this.LengthPlainText.TabIndex = 12;
+            this.LengthPlainText.Text = "---";
+            // 
+            // LengthKey
+            // 
+            this.LengthKey.AutoSize = true;
+            this.LengthKey.Location = new System.Drawing.Point(89, 70);
+            this.LengthKey.Name = "LengthKey";
+            this.LengthKey.Size = new System.Drawing.Size(33, 25);
+            this.LengthKey.TabIndex = 13;
+            this.LengthKey.Text = "---";
+            // 
             // Vigenere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.LengthKey);
+            this.Controls.Add(this.LengthPlainText);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.btnDecrypt);
@@ -202,5 +227,7 @@ namespace BMANM06
         private System.Windows.Forms.Button btnDecrypt;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label LengthPlainText;
+        private System.Windows.Forms.Label LengthKey;
     }
 }

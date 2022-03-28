@@ -12,17 +12,34 @@ namespace BMANM06
 {
     public partial class Vigenere : Form
     {
+       
         public Vigenere()
         {
             InitializeComponent();
+        }
+        string chuoi = "ABCDEFGHIKLMNOPQRSTUVWXYZAĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXY?!ÁÀẢÚ";
+        private void Vigenere_Load(object sender, EventArgs e)
+        {
+            btnGenerate.Enabled = false;
+        }
+
+        private void txtPlainText_TextChanged(object sender, EventArgs e)
+        {
+            btnGenerate.Enabled = true;
+            LengthPlainText.Text = "Độ dài PlainText: " + txtPlainText.Text.Length + " kí tự.";
+        }
+        private void txtKey_TextChanged(object sender, EventArgs e)
+        {
+            LengthKey.Text = "Độ dài Key: " + txtKey.Text.Length + " kí tự.";
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
             const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            txtKey.Text = new string(Enumerable.Repeat(chars, 5)
-              .Select(s => s[rnd.Next(s.Length)]).ToArray()).ToString();
+            txtKey.Text = new string(Enumerable.Repeat(chars, txtPlainText.Text.Length)
+              .Select(s => s[rnd.Next(s.Length)]).ToArray()).ToString().ToUpper();
+
         }
         //HÀM MÃ HÓA
         static void VigenereEncrypt(ref StringBuilder s, string key)
@@ -42,11 +59,20 @@ namespace BMANM06
         }
         private void btnMaHoa_Click(object sender, EventArgs e)
         {
-            if(txtPlainText.Text != "" && txtKey.Text != "")
+            if (txtPlainText.Text != "" && txtKey.Text != "" && txtKey.Text.Length >= txtPlainText.Text.Length)
             {
+                txtPlainText.Text = txtPlainText.Text.ToUpper();
                 StringBuilder s = new StringBuilder(txtPlainText.Text);
                 VigenereEncrypt(ref s, txtKey.Text);
                 txtCiphertext.Text = s.ToString();
+
+            }
+            if (txtKey.Text.Length < txtPlainText.Text.Length) {
+                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thống báo");
+            }
+            if (txtPlainText.Text == "" || txtKey.Text == "")
+            {
+                MessageBox.Show("Khóa hoặc chuỗi mã hóa chưa được nhập", "Thông báo");
             }
         }
         ///HÀM GIẢI MÃ
@@ -71,9 +97,14 @@ namespace BMANM06
         {
             if(txtCiphertext.Text != "")
             {
+                txtCiphertext.Text = txtCiphertext.Text.ToUpper();
                 StringBuilder s = new StringBuilder(txtCiphertext.Text);
                 VigenereDecrypt(ref s, txtKey.Text);
-                txtDecrypt.Text = s.ToString().ToLower();
+                txtDecrypt.Text = s.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo");
             }
         }
 
@@ -83,6 +114,8 @@ namespace BMANM06
             txtPlainText.Text = "";
             txtCiphertext.Text = "";
             txtDecrypt.Text = "";
+            LengthKey.Text = "";
+            LengthPlainText.Text = "";
         }
 
         private void Vigenere_FormClosing(object sender, FormClosingEventArgs e)
@@ -93,9 +126,8 @@ namespace BMANM06
             }
         }
 
-        private void Vigenere_Load(object sender, EventArgs e)
+        private void txtKey_KeyUp(object sender, KeyEventArgs e)
         {
-
         }
     }
 }
