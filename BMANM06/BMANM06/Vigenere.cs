@@ -18,6 +18,23 @@ namespace BMANM06
             InitializeComponent();
         }
         string chuoi = "ABCDEFGHIKLMNOPQRSTUVWXYZAĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXY?!ÁÀẢÚ";
+
+        public int[] chuoi_mangchiso(string s)
+        {
+            int[] mang = new int[s.Length];
+            for (int i = 0; i < s.Length; i++)
+                mang[i] = chuoi.IndexOf(s[i]);
+            return mang;
+        }
+        public string chiso_chuoi(int[] a)
+        {
+            string s = "";
+            for (int i = 0; i < a.Length; i++)
+                s += chuoi[a[i]];
+            return s;
+        }
+
+
         private void Vigenere_Load(object sender, EventArgs e)
         {
             btnGenerate.Enabled = false;
@@ -64,11 +81,22 @@ namespace BMANM06
                 txtPlainText.Text = txtPlainText.Text.ToUpper();
                 StringBuilder s = new StringBuilder(txtPlainText.Text);
                 VigenereEncrypt(ref s, txtKey.Text);
-                txtCiphertext.Text = s.ToString();
+                txtCiphertext.Text = s.ToString().ToUpper();
+
+                /*txtPlainText.Text = txtPlainText.Text.ToUpper();
+                int[] p = chuoi_mangchiso(txtPlainText.Text);
+                int[] k = chuoi_mangchiso(txtKey.Text);
+                int[] kq = new int[txtPlainText.Text.Length];
+                for (int i = 0, j = 0; i < txtPlainText.Text.Length; i++)
+                {
+                    kq[i] = (p[i] + k[j]) % chuoi.Length;
+                    j = ++j % k.Length;
+                }
+                txtCiphertext.Text = chiso_chuoi(kq);*/
 
             }
             if (txtKey.Text.Length < txtPlainText.Text.Length) {
-                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thống báo");
+                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thông báo");
             }
             if (txtPlainText.Text == "" || txtKey.Text == "")
             {
@@ -100,7 +128,19 @@ namespace BMANM06
                 txtCiphertext.Text = txtCiphertext.Text.ToUpper();
                 StringBuilder s = new StringBuilder(txtCiphertext.Text);
                 VigenereDecrypt(ref s, txtKey.Text);
-                txtDecrypt.Text = s.ToString();
+                txtDecrypt.Text = s.ToString().ToUpper();
+
+                /*int[] c = chuoi_mangchiso(txtCiphertext.Text);
+                int[] k = chuoi_mangchiso(txtKey.Text);
+                int[] kq = new int[txtCiphertext.Text.Length];
+                for (int i = 0, j = 0; i < txtCiphertext.Text.Length; i++)
+                {
+                    kq[i] = (c[i] - k[j]) % chuoi.Length;
+                    if (kq[i] < 0)
+                        kq[i] = (c[i] + (chuoi.Length - k[j])) % chuoi.Length;
+                    j = ++j % k.Length;
+                }
+                txtDecrypt.Text = chiso_chuoi(kq);*/
             }
             else
             {
