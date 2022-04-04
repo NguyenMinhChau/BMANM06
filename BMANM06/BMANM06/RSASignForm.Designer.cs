@@ -133,9 +133,9 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(18, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 25);
+            this.label3.Size = new System.Drawing.Size(304, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Hàm số Ơle = (p-1)*(q-1):phi(n) = ";
+            this.label3.Text = "Hàm số Ơle ϕ(n) = (p-1)*(q-1) = ";
             // 
             // label2
             // 
@@ -233,9 +233,9 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(6, 38);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 25);
+            this.label6.Size = new System.Drawing.Size(169, 25);
             this.label6.TabIndex = 2;
-            this.label6.Text = "(mode phi(n)): d = ";
+            this.label6.Text = "d = (modeϕ(n)) = ";
             // 
             // F_rsa_TaoKhoa
             // 

@@ -245,6 +245,11 @@ namespace BMANM06
             }
         }
 
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         // "Hàm kiểm tra hai số nguyên tố cùng nhau"
         private bool RSA_nguyenToCungNhau(int ai, int bi)
         {
