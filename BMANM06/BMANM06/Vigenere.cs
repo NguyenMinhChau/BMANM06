@@ -96,11 +96,11 @@ namespace BMANM06
 
             }
             if (txtKey.Text.Length < txtPlainText.Text.Length) {
-                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thông báo");
+                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (txtPlainText.Text == "" || txtKey.Text == "")
             {
-                MessageBox.Show("Khóa hoặc chuỗi mã hóa chưa được nhập", "Thông báo");
+                MessageBox.Show("Khóa hoặc chuỗi mã hóa chưa được nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         ///HÀM GIẢI MÃ
@@ -144,7 +144,7 @@ namespace BMANM06
             }
             else
             {
-                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo");
+                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -146,13 +146,13 @@ namespace BMANM06
         private void rsa_btMaHoa_Click(object sender, EventArgs e)
         {
             if (RSA_d_dau != 1)
-            { MessageBox.Show("Bạn chưa tạo khóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show("Bạn chưa tạo khóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             else
             {
                 if (rsa_BanRo.Text == "")
                 {
-                    MessageBox.Show("Bạn chưa nhập bản rõ để mã hóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn chưa nhập bản rõ để mã hóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else
@@ -176,7 +176,7 @@ namespace BMANM06
         private void rsa_btGiaiMa_Click(object sender, EventArgs e)
         {
             if (RSA_d_dau != 2)
-                MessageBox.Show("Bạn phải tạo khóa trước ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải tạo khóa trước ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 try
                 {

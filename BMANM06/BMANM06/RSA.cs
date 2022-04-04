@@ -117,7 +117,7 @@ namespace BMANM06
                     }
                 }
             }
-            MessageBox.Show("Tạo key có độ dài " + lengthKey.ToString() + " bits thành công.");
+            MessageBox.Show("Tạo key có độ dài " + lengthKey.ToString() + " bits thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnOpenFile_Click_1(object sender, EventArgs e)
@@ -152,7 +152,7 @@ namespace BMANM06
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Failed: " + ex.Message);
+                        MessageBox.Show("Failed: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -179,12 +179,12 @@ namespace BMANM06
                 }
                 catch (Exception ioex)
                 {
-                    MessageBox.Show("Failed: " + ioex.Message);
+                    MessageBox.Show("Failed: " + ioex.Message,"Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn đường dẫn !");
+                MessageBox.Show("Vui lòng chọn đường dẫn !","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void RSA_Algorithm(string inputFile, string outputFile, RSAParameters RSAKeyInfo, bool isEncrypt)
@@ -236,7 +236,7 @@ namespace BMANM06
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed: " + ex.Message);
+                MessageBox.Show("Failed: " + ex.Message,"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnEncryptClick()
@@ -244,7 +244,7 @@ namespace BMANM06
             enabledOrDisableButtons(false);
             if (this.txtFileKey.Text.Length == 0 || this.txtModule.Text.Length == 0 || this.txtMuGiaiMa.Text.Length == 0 || this.txtMuMaHoa.Text.Length == 0)
             {
-                MessageBox.Show("Key không hợp lệ!");
+                MessageBox.Show("Key không hợp lệ!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 enabledOrDisableButtons(true);
                 return;
             }
@@ -276,7 +276,7 @@ namespace BMANM06
 
                         if (filePaths.Length == 0 || (filePaths.Length == 1 && (Path.GetFileName(filePaths[0]) == "Thumbs.db")))
                         {
-                            MessageBox.Show("Thư mục rỗng!");
+                            MessageBox.Show("Thư mục rỗng!","Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
                             enabledOrDisableButtons(true);
                             return;
                         }
@@ -294,18 +294,18 @@ namespace BMANM06
                     enabledOrDisableButtons(true);
                     sw.Stop();
                     double elapsedMs = sw.Elapsed.TotalMilliseconds / 1000;
-                    MessageBox.Show("Thời gian thực thi " + elapsedMs.ToString() + "s");
+                    MessageBox.Show("Thời gian thực thi " + elapsedMs.ToString() + "s","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     enabledOrDisableButtons(true);
-                    MessageBox.Show("Dữ liệu không đủ để mã hóa!");
+                    MessageBox.Show("Dữ liệu không đủ để mã hóa!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 enabledOrDisableButtons(true);
-                MessageBox.Show("Failed: " + ex.Message);
+                MessageBox.Show("Failed: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             enabledOrDisableButtons(true);
         }
@@ -314,12 +314,12 @@ namespace BMANM06
         {
             if (txtOutput.Text.Length == 0)
             {
-                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output");
+                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtFileKey.Text.Length == 0)
             {
-                MessageBox.Show("Vui lòng chọn đường dẫn đến Key!");
+                MessageBox.Show("Vui lòng chọn đường dẫn đến Key!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             btnEncryptClick();
@@ -344,7 +344,7 @@ namespace BMANM06
 
                     if (isEncryptFile && Path.GetExtension(inputFileName) != ".lhde")
                     {
-                        MessageBox.Show("Tệp tin này không được hỗ trợ đển giải mã!");
+                        MessageBox.Show("Tệp tin này không được hỗ trợ đển giải mã!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         enabledOrDisableButtons(true);
                         return;
                     }
@@ -367,7 +367,7 @@ namespace BMANM06
                         string[] filePaths = Directory.GetFiles(inputFileName, "*.lhde", SearchOption.AllDirectories);
                         if (filePaths.Length == 0 || (filePaths.Length == 1 && (Path.GetFileName(filePaths[0]) == "Thumbs.db")))
                         {
-                            MessageBox.Show("Thư mục rỗng!");
+                            MessageBox.Show("Thư mục rỗng!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             enabledOrDisableButtons(true);
                             return;
                         }
@@ -384,17 +384,17 @@ namespace BMANM06
                     enabledOrDisableButtons(true);
                     sw.Stop();
                     double elapsedMs = sw.Elapsed.TotalMilliseconds / 1000;
-                    MessageBox.Show("Tổng thời gian thực thi: " + elapsedMs.ToString() + "s");
+                    MessageBox.Show("Tổng thời gian thực thi: " + elapsedMs.ToString() + "s", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Không đủ điều kiện để giải mã !");
+                    MessageBox.Show("Không đủ điều kiện để giải mã!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed: " + ex.Message);
+                MessageBox.Show("Failed: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             enabledOrDisableButtons(true);
         }
@@ -403,7 +403,7 @@ namespace BMANM06
         {
             if (txtOutput.Text.Length == 0)
             {
-                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output");
+                MessageBox.Show("Vui lòng chọn đường dẫn đến thư mục Output", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             btnDecryptClick();
@@ -464,7 +464,7 @@ namespace BMANM06
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn file", "Thông báo");
+                MessageBox.Show("Vui lòng chọn file", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -504,7 +504,7 @@ namespace BMANM06
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập chuỗi cần mã hóa", "Thông báo");
+                MessageBox.Show("Vui lòng nhập chuỗi cần mã hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -517,7 +517,7 @@ namespace BMANM06
             }
             else
             {
-                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo");
+                MessageBox.Show("Vui lòng mã hóa chuỗi bất kì trước khi giải mã", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

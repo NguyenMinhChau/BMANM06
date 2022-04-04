@@ -330,11 +330,11 @@
             // btKiemTraXacThuc_RSA
             // 
             this.btKiemTraXacThuc_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btKiemTraXacThuc_RSA.Location = new System.Drawing.Point(353, 79);
+            this.btKiemTraXacThuc_RSA.Location = new System.Drawing.Point(265, 79);
             this.btKiemTraXacThuc_RSA.Name = "btKiemTraXacThuc_RSA";
-            this.btKiemTraXacThuc_RSA.Size = new System.Drawing.Size(261, 34);
+            this.btKiemTraXacThuc_RSA.Size = new System.Drawing.Size(349, 34);
             this.btKiemTraXacThuc_RSA.TabIndex = 3;
-            this.btKiemTraXacThuc_RSA.Text = "Kiểm tra xác thực";
+            this.btKiemTraXacThuc_RSA.Text = "Kiểm tra xác thực toàn vẹn dữ liệu";
             this.btKiemTraXacThuc_RSA.UseVisualStyleBackColor = true;
             this.btKiemTraXacThuc_RSA.Click += new System.EventHandler(this.btKiemTraXacThuc_RSA_Click);
             // 
