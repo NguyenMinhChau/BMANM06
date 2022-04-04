@@ -10,6 +10,12 @@
     <Compile Update="RSA.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RSADecryptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RSASignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vigenere.cs">
       <SubType>Form</SubType>
     </Compile>

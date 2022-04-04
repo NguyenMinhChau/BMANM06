@@ -33,5 +33,17 @@ namespace BMANM06
             var form = new Vigenere();
             form.Show();
         }
+
+        private void RSADecrypt_Click(object sender, EventArgs e)
+        {
+            var form = new RSADecryptForm();
+            form.Show();
+        }
+
+        private void RSAChuKySo_Click(object sender, EventArgs e)
+        {
+            var form = new RSASignForm();
+            form.Show();
+        }
     }
 }

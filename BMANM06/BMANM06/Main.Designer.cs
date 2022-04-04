@@ -33,6 +33,8 @@ namespace BMANM06
             this.rSAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vigenereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.RSADecrypt = new System.Windows.Forms.ToolStripMenuItem();
+            this.RSAChuKySo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,9 @@ namespace BMANM06
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rSAToolStripMenuItem,
-            this.vigenereToolStripMenuItem});
+            this.vigenereToolStripMenuItem,
+            this.RSADecrypt,
+            this.RSAChuKySo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -81,6 +85,20 @@ namespace BMANM06
             this.listBox1.Size = new System.Drawing.Size(776, 355);
             this.listBox1.TabIndex = 1;
             // 
+            // RSADecrypt
+            // 
+            this.RSADecrypt.Name = "RSADecrypt";
+            this.RSADecrypt.Size = new System.Drawing.Size(129, 29);
+            this.RSADecrypt.Text = "RSA Mã Hóa";
+            this.RSADecrypt.Click += new System.EventHandler(this.RSADecrypt_Click);
+            // 
+            // RSAChuKySo
+            // 
+            this.RSAChuKySo.Name = "RSAChuKySo";
+            this.RSAChuKySo.Size = new System.Drawing.Size(147, 29);
+            this.RSAChuKySo.Text = "RSA Chữ Ký Số";
+            this.RSAChuKySo.Click += new System.EventHandler(this.RSAChuKySo_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -106,6 +124,8 @@ namespace BMANM06
         private System.Windows.Forms.ToolStripMenuItem rSAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vigenereToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem RSADecrypt;
+        private System.Windows.Forms.ToolStripMenuItem RSAChuKySo;
     }
 }
 
