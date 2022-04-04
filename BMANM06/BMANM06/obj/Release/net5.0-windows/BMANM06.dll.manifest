@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="BMANM06.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="BMANM06.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="5.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -62,22 +62,22 @@
       <dsig:DigestValue>wraQslIS2SJ29LSL9v26MRvZgKKYQ116lPFo60Cwc+0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BMANM06.dll" size="61440">
+  <file name="BMANM06.dll" size="60928">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>F7M/fBEg74gxPjF3755TtlsXXWDcmJUy5YbejY6IRuQ=</dsig:DigestValue>
+      <dsig:DigestValue>u3qKGJven2yGus4gRiNDBPjFgG7VeEcwydRBB/OszGI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BMANM06.exe" size="125952">
+  <file name="BMANM06.exe" size="125440">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HN2ZbPs/4oWUrc1wUoUREK/PUgDYbV80SJOt8VtX0DE=</dsig:DigestValue>
+      <dsig:DigestValue>TXtUhy8oUIBlmjz5y6/BBUivkDPiidAbspN6aVu/8SA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="BMANM06.runtimeconfig.json" size="260">

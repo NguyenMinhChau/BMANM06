@@ -57,4 +57,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Chọn ngẫu nhiên số mũ e sao cho 1&lt;e&lt;φ(n) và là số nguyên tố cùng nhau 
+với φ(n) (SNT cùng nhau là số tự nhiên có ước chung lớn nhất là 1 =&gt; Bấm 
+Casio Shift 6 3 + Nhập 2 số φ(n) và e vào =&gt; Kiểm tra kết quả ra 1)</value>
+  </data>
 </root>

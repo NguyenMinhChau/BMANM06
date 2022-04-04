@@ -197,10 +197,11 @@ namespace BMANM06
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(262, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
+            this.label1.Size = new System.Drawing.Size(102, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tạo Key";
             // 
@@ -271,10 +272,11 @@ namespace BMANM06
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(240, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
+            this.label4.Size = new System.Drawing.Size(165, 27);
             this.label4.TabIndex = 1;
             this.label4.Text = "Thông tin Key";
             // 
@@ -428,10 +430,11 @@ namespace BMANM06
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(156, 18);
+            this.label8.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(127, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(297, 25);
+            this.label8.Size = new System.Drawing.Size(342, 27);
             this.label8.TabIndex = 1;
             this.label8.Text = "Mã hóa và giải mã File/Folder";
             // 
@@ -544,10 +547,11 @@ namespace BMANM06
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label11.Location = new System.Drawing.Point(242, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 25);
+            this.label11.Size = new System.Drawing.Size(146, 27);
             this.label11.TabIndex = 2;
             this.label11.Text = "Kiểm tra file";
             // 
@@ -645,10 +649,11 @@ namespace BMANM06
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label16.Location = new System.Drawing.Point(225, 18);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(244, 25);
+            this.label16.Size = new System.Drawing.Size(279, 27);
             this.label16.TabIndex = 2;
             this.label16.Text = "Mã hóa và giải mã chuỗi";
             // 

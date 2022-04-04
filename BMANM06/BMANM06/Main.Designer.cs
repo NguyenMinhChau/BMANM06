@@ -41,6 +41,7 @@ namespace BMANM06
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rSAToolStripMenuItem,
@@ -49,35 +50,39 @@ namespace BMANM06
             this.RSAChuKySo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // rSAToolStripMenuItem
             // 
+            this.rSAToolStripMenuItem.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.rSAToolStripMenuItem.Name = "rSAToolStripMenuItem";
-            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.rSAToolStripMenuItem.Text = "RSA";
             this.rSAToolStripMenuItem.Click += new System.EventHandler(this.rSAToolStripMenuItem_Click);
             // 
             // vigenereToolStripMenuItem
             // 
+            this.vigenereToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.vigenereToolStripMenuItem.Name = "vigenereToolStripMenuItem";
-            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
+            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(107, 27);
             this.vigenereToolStripMenuItem.Text = "Vigenere ";
             this.vigenereToolStripMenuItem.Click += new System.EventHandler(this.vigenereToolStripMenuItem_Click);
             // 
             // RSADecrypt
             // 
+            this.RSADecrypt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.RSADecrypt.Name = "RSADecrypt";
-            this.RSADecrypt.Size = new System.Drawing.Size(129, 29);
+            this.RSADecrypt.Size = new System.Drawing.Size(137, 27);
             this.RSADecrypt.Text = "RSA Mã Hóa";
             this.RSADecrypt.Click += new System.EventHandler(this.RSADecrypt_Click);
             // 
             // RSAChuKySo
             // 
+            this.RSAChuKySo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.RSAChuKySo.Name = "RSAChuKySo";
-            this.RSAChuKySo.Size = new System.Drawing.Size(147, 29);
+            this.RSAChuKySo.Size = new System.Drawing.Size(160, 27);
             this.RSAChuKySo.Text = "RSA Chữ Ký Số";
             this.RSAChuKySo.Click += new System.EventHandler(this.RSAChuKySo_Click);
             // 
@@ -95,13 +100,14 @@ namespace BMANM06
             "6. PHẠM THANH QUAN \t- \t4501104188"});
             this.listBox1.Location = new System.Drawing.Point(12, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(776, 328);
+            this.listBox1.Size = new System.Drawing.Size(776, 301);
             this.listBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(172, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(485, 25);

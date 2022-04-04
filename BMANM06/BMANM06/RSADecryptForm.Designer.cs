@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RSADecryptForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.rsa_soPhiN = new System.Windows.Forms.TextBox();
             this.rsa_soQ = new System.Windows.Forms.TextBox();
             this.rsa_soP = new System.Windows.Forms.TextBox();
@@ -39,6 +42,7 @@
             this.rd_tcRSA = new System.Windows.Forms.RadioButton();
             this.rd_tdRSA = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.rsa_soE = new System.Windows.Forms.TextBox();
             this.rsa_soN = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -91,6 +95,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.rsa_soPhiN);
             this.groupBox1.Controls.Add(this.rsa_soQ);
             this.groupBox1.Controls.Add(this.rsa_soP);
@@ -99,18 +105,41 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.rd_tcRSA);
             this.groupBox1.Controls.Add(this.rd_tdRSA);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(602, 188);
+            this.groupBox1.Size = new System.Drawing.Size(602, 245);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo khóa";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label13.Location = new System.Drawing.Point(11, 207);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(367, 20);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Các giá trị d, p, q và φ(n) cần được giữ bí mật";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label11.Location = new System.Drawing.Point(11, 176);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(401, 20);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Với p ≠ q, lựa chọn ngẫu nhiên đủ lớn và độc lập. ";
+            // 
             // rsa_soPhiN
             // 
             this.rsa_soPhiN.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rsa_soPhiN.Location = new System.Drawing.Point(308, 138);
+            this.rsa_soPhiN.Location = new System.Drawing.Point(308, 130);
             this.rsa_soPhiN.Name = "rsa_soPhiN";
             this.rsa_soPhiN.Size = new System.Drawing.Size(282, 33);
             this.rsa_soPhiN.TabIndex = 7;
@@ -135,11 +164,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(9, 138);
+            this.label3.Location = new System.Drawing.Point(9, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 25);
+            this.label3.Size = new System.Drawing.Size(305, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Hàm số Ơle ϕ(n) = (p-1)*(q-1) = ";
+            this.label3.Text = "Hàm số Ơle φ(n) = (p-1)*(q-1) = ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -147,9 +177,9 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(308, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 25);
+            this.label2.Size = new System.Drawing.Size(167, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "SNT bí mật q = ";
+            this.label2.Text = "Số nguyên tố q = ";
             // 
             // label1
             // 
@@ -157,9 +187,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(9, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.Size = new System.Drawing.Size(167, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "SNT bí mật p = ";
+            this.label1.Text = "Số nguyên tố p = ";
             // 
             // rd_tcRSA
             // 
@@ -187,32 +217,46 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.rsa_soE);
             this.groupBox2.Controls.Add(this.rsa_soN);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(3, 197);
+            this.groupBox2.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(3, 254);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 138);
+            this.groupBox2.Size = new System.Drawing.Size(602, 222);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cặp khóa công khai";
+            this.groupBox2.Text = "Cặp khóa công khai {e,N}";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label12.Location = new System.Drawing.Point(6, 138);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label12.Size = new System.Drawing.Size(595, 60);
+            this.label12.TabIndex = 10;
+            this.label12.Text = resources.GetString("label12.Text");
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // rsa_soE
             // 
             this.rsa_soE.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rsa_soE.Location = new System.Drawing.Point(246, 90);
+            this.rsa_soE.Location = new System.Drawing.Point(308, 90);
             this.rsa_soE.Name = "rsa_soE";
-            this.rsa_soE.Size = new System.Drawing.Size(344, 33);
+            this.rsa_soE.Size = new System.Drawing.Size(282, 33);
             this.rsa_soE.TabIndex = 9;
             // 
             // rsa_soN
             // 
             this.rsa_soN.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rsa_soN.Location = new System.Drawing.Point(246, 44);
+            this.rsa_soN.Location = new System.Drawing.Point(308, 44);
             this.rsa_soN.Name = "rsa_soN";
-            this.rsa_soN.Size = new System.Drawing.Size(344, 33);
+            this.rsa_soN.Size = new System.Drawing.Size(282, 33);
             this.rsa_soN.TabIndex = 8;
             // 
             // label5
@@ -231,29 +275,29 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(9, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 25);
+            this.label4.Size = new System.Drawing.Size(293, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Số module công khai n = ";
+            this.label4.Text = "Số module công khai n = p*q = ";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rsa_soD);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(3, 341);
+            this.groupBox3.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Location = new System.Drawing.Point(3, 482);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(602, 93);
+            this.groupBox3.Size = new System.Drawing.Size(602, 98);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Khóa bí mật";
+            this.groupBox3.Text = "Khóa bí mật {d,N}";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // rsa_soD
             // 
             this.rsa_soD.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rsa_soD.Location = new System.Drawing.Point(167, 39);
+            this.rsa_soD.Location = new System.Drawing.Point(213, 39);
             this.rsa_soD.Name = "rsa_soD";
-            this.rsa_soD.Size = new System.Drawing.Size(423, 33);
+            this.rsa_soD.Size = new System.Drawing.Size(377, 33);
             this.rsa_soD.TabIndex = 10;
             // 
             // label6
@@ -262,9 +306,9 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(9, 39);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 25);
+            this.label6.Size = new System.Drawing.Size(205, 25);
             this.label6.TabIndex = 5;
-            this.label6.Text = "d = (modϕ(n)) =  ";
+            this.label6.Text = "d = 1/e (mod φ(n)) =  ";
             // 
             // rsa_TaoKhoa
             // 
@@ -272,7 +316,7 @@
             this.rsa_TaoKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rsa_TaoKhoa.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rsa_TaoKhoa.ForeColor = System.Drawing.Color.Red;
-            this.rsa_TaoKhoa.Location = new System.Drawing.Point(3, 440);
+            this.rsa_TaoKhoa.Location = new System.Drawing.Point(3, 586);
             this.rsa_TaoKhoa.Name = "rsa_TaoKhoa";
             this.rsa_TaoKhoa.Size = new System.Drawing.Size(602, 34);
             this.rsa_TaoKhoa.TabIndex = 3;
@@ -287,8 +331,8 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.rsa_BanRo);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(3, 480);
+            this.groupBox4.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox4.Location = new System.Drawing.Point(3, 626);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(602, 352);
             this.groupBox4.TabIndex = 4;
@@ -313,6 +357,7 @@
             this.rsa_banMaHoaGuiDen.Location = new System.Drawing.Point(317, 69);
             this.rsa_banMaHoaGuiDen.Multiline = true;
             this.rsa_banMaHoaGuiDen.Name = "rsa_banMaHoaGuiDen";
+            this.rsa_banMaHoaGuiDen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.rsa_banMaHoaGuiDen.Size = new System.Drawing.Size(273, 233);
             this.rsa_banMaHoaGuiDen.TabIndex = 9;
             // 
@@ -332,6 +377,7 @@
             this.rsa_BanRo.Location = new System.Drawing.Point(11, 69);
             this.rsa_BanRo.Multiline = true;
             this.rsa_BanRo.Name = "rsa_BanRo";
+            this.rsa_BanRo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.rsa_BanRo.Size = new System.Drawing.Size(276, 233);
             this.rsa_BanRo.TabIndex = 7;
             // 
@@ -352,8 +398,8 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.rsa_BanMaHoa);
             this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox5.Location = new System.Drawing.Point(3, 838);
+            this.groupBox5.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox5.Location = new System.Drawing.Point(3, 984);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(602, 359);
             this.groupBox5.TabIndex = 5;
@@ -378,6 +424,7 @@
             this.rsa_banGiaiMa.Location = new System.Drawing.Point(317, 69);
             this.rsa_banGiaiMa.Multiline = true;
             this.rsa_banGiaiMa.Name = "rsa_banGiaiMa";
+            this.rsa_banGiaiMa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.rsa_banGiaiMa.Size = new System.Drawing.Size(273, 233);
             this.rsa_banGiaiMa.TabIndex = 9;
             // 
@@ -397,6 +444,7 @@
             this.rsa_BanMaHoa.Location = new System.Drawing.Point(11, 69);
             this.rsa_BanMaHoa.Multiline = true;
             this.rsa_BanMaHoa.Name = "rsa_BanMaHoa";
+            this.rsa_BanMaHoa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.rsa_BanMaHoa.Size = new System.Drawing.Size(276, 233);
             this.rsa_BanMaHoa.TabIndex = 7;
             // 
@@ -415,8 +463,8 @@
             this.groupBox6.Controls.Add(this.rsa_btThoat);
             this.groupBox6.Controls.Add(this.rsa_maHoaBanRoMoi);
             this.groupBox6.Controls.Add(this.rsa_TaoKhoaMoi);
-            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox6.Location = new System.Drawing.Point(3, 1203);
+            this.groupBox6.Font = new System.Drawing.Font("Rockwell", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox6.Location = new System.Drawing.Point(3, 1349);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(602, 110);
             this.groupBox6.TabIndex = 6;
@@ -524,5 +572,8 @@
         private System.Windows.Forms.Button rsa_btThoat;
         private System.Windows.Forms.Button rsa_maHoaBanRoMoi;
         private System.Windows.Forms.Button rsa_TaoKhoaMoi;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }

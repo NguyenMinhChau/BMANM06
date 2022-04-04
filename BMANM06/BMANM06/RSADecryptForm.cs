@@ -102,28 +102,28 @@ namespace BMANM06
                 if (rd_tdRSA.Checked == false && rd_tcRSA.Checked == true)
                 {
                     if (rsa_soP.Text == "" || rsa_soQ.Text == "")
-                        MessageBox.Show("Phải nhập đủ 2 số ", "Thông Báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Phải nhập đủ 2 số nguyên tố p và q!", "Thông Báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
                     {
                         RSA_soP = int.Parse(rsa_soP.Text);
                         RSA_soQ = int.Parse(rsa_soQ.Text);
                         if (RSA_soP == RSA_soQ)
                         {
-                            MessageBox.Show("Nhập 2 số nguyên tố khác nhau ", " Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Nhập 2 số nguyên tố p và q khác nhau!", " Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             rsa_soQ.Focus();
                         }
                         else
                         {
                             if (!RSA_kiemTraNguyenTo(RSA_soP) || RSA_soP <= 1)
                             {
-                                MessageBox.Show("Phải nhập số nguyên  tố [p] lớn hơn 1 ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Số p phải là số nguyên tố lớn hơn 1!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 rsa_soP.Focus();
                             }
                             else
                             {
                                 if (!RSA_kiemTraNguyenTo(RSA_soQ) || RSA_soQ <= 1)
                                 {
-                                    MessageBox.Show("Phải nhập số nguyên  tố [q] lớn hơn 1 ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Số q phải là số nguyên tố lớn hơn 1!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     rsa_soQ.Focus();
                                 }
                                 else
@@ -176,7 +176,7 @@ namespace BMANM06
         private void rsa_btGiaiMa_Click(object sender, EventArgs e)
         {
             if (RSA_d_dau != 2)
-                MessageBox.Show("Bạn phải tạo khóa trước ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn phải tạo khóa trước!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 try
                 {
@@ -195,6 +195,7 @@ namespace BMANM06
         private void rd_tdRSA_CheckedChanged(object sender, EventArgs e)
         {
             rsa_TaoKhoa.Enabled = true;
+            rsa_TaoKhoa.Text = "Tạo khóa tự động";
             rsa_soP.Text = rsa_soQ.Text = rsa_soPhiN.Text = rsa_soN.Text = rsa_soE.Text = rsa_soD.Text = string.Empty;
             rsa_soP.Enabled = rsa_soQ.Enabled = rsa_soPhiN.Enabled = rsa_soN.Enabled = rsa_soE.Enabled = rsa_soD.Enabled = false;
         }
@@ -202,8 +203,10 @@ namespace BMANM06
         private void rd_tcRSA_CheckedChanged(object sender, EventArgs e)
         {
             rsa_TaoKhoa.Enabled = true;
+            rsa_TaoKhoa.Text = "Tạo khóa tự chọn";
             rsa_soP.Text = rsa_soQ.Text = rsa_soPhiN.Text = rsa_soN.Text = rsa_soE.Text = rsa_soD.Text = string.Empty;
-            rsa_soP.Enabled = rsa_soQ.Enabled = rsa_soPhiN.Enabled = rsa_soN.Enabled = rsa_soE.Enabled = rsa_soD.Enabled = true;
+            rsa_soP.Enabled = rsa_soQ.Enabled  = true;
+            rsa_soE.Enabled = rsa_soD.Enabled = rsa_soPhiN.Enabled = rsa_soN.Enabled = false;
         }
 
         private void rsa_maHoaBanRoMoi_Click(object sender, EventArgs e)
@@ -250,22 +253,11 @@ namespace BMANM06
 
         }
 
-        // "Hàm kiểm tra hai số nguyên tố cùng nhau"
-        private bool RSA_nguyenToCungNhau(int ai, int bi)
+        private void label3_Click(object sender, EventArgs e)
         {
-            bool ktx_;
-            // giải thuật Euclid;
-            int temp;
-            while (bi != 0)
-            {
-                temp = ai % bi;
-                ai = bi;
-                bi = temp;
-            }
-            if (ai == 1) { ktx_ = true; }
-            else ktx_ = false;
-            return ktx_;
+
         }
+
         // "Hàm lấy mod"
         public int RSA_mod(int mx, int ex, int nx)
         {

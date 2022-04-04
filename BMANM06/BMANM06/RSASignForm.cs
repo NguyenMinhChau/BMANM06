@@ -101,24 +101,70 @@ namespace BMANM06
         {
             btChonFileKy_RSA.Enabled = btChonFileKy_RSA.Enabled = btChonFileXacThuc_RSA.Enabled = true;
 
-            F_reset_();
-            RSA_soP = RSA_soQ = 0;
-            do
+            if(F_rsa_soP.Text == "" && F_rsa_soQ.Text == "")
             {
-                RSA_soP = RSA_ChonSoNgauNhien();
-                RSA_soQ = RSA_ChonSoNgauNhien();
-            }
-            while (RSA_soP == RSA_soQ || !RSA_kiemTraNguyenTo(RSA_soP) || !RSA_kiemTraNguyenTo(RSA_soQ));
-            F_rsa_soP.Text = RSA_soP.ToString();
-            F_rsa_soQ.Text = RSA_soQ.ToString();
-            F_TaoKhoa();
+                F_reset_();
+                RSA_soP = RSA_soQ = 0;
+                do
+                {
+                    RSA_soP = RSA_ChonSoNgauNhien();
+                    RSA_soQ = RSA_ChonSoNgauNhien();
+                }
+                while (RSA_soP == RSA_soQ || !RSA_kiemTraNguyenTo(RSA_soP) || !RSA_kiemTraNguyenTo(RSA_soQ));
+                F_rsa_soP.Text = RSA_soP.ToString();
+                F_rsa_soQ.Text = RSA_soQ.ToString();
+                F_TaoKhoa();
 
-            F_rsa_soPhiN.Text = RSA_soPhi_n.ToString();
-            F_rsa_soE.Text = RSA_soE.ToString();
-            F_rsa_soD.Text = RSA_soD.ToString();
-            F_rsa_soN.Text = RSA_soN.ToString();
-            F_rsa_d_dau = 1;
-            F_rsa_TaoKhoa.Enabled = false;
+                F_rsa_soPhiN.Text = RSA_soPhi_n.ToString();
+                F_rsa_soE.Text = RSA_soE.ToString();
+                F_rsa_soD.Text = RSA_soD.ToString();
+                F_rsa_soN.Text = RSA_soN.ToString();
+                F_rsa_d_dau = 1;
+                F_rsa_TaoKhoa.Enabled = false;
+            }
+            else
+            {
+                if (F_rsa_soP.Text == "" || F_rsa_soQ.Text == "")
+                    MessageBox.Show("Phải nhập đủ 2 số nguyên tố p và q!", "Thông Báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    RSA_soP = int.Parse(F_rsa_soP.Text);
+                    RSA_soQ = int.Parse(F_rsa_soQ.Text);
+                    if (RSA_soP == RSA_soQ)
+                    {
+                        MessageBox.Show("Nhập 2 số nguyên tố p và q khác nhau!", " Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        F_rsa_soQ.Focus();
+                    }
+                    else
+                    {
+                        if (!RSA_kiemTraNguyenTo(RSA_soP) || RSA_soP <= 1)
+                        {
+                            MessageBox.Show("Số p phải là số nguyên tố lớn hơn 1!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            F_rsa_soP.Focus();
+                        }
+                        else
+                        {
+                            if (!RSA_kiemTraNguyenTo(RSA_soQ) || RSA_soQ <= 1)
+                            {
+                                MessageBox.Show("Số q phải là số nguyên tố lớn hơn 1!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                F_rsa_soQ.Focus();
+                            }
+                            else
+                            {
+                                F_TaoKhoa();
+                                F_rsa_soPhiN.Text = RSA_soPhi_n.ToString();
+                                F_rsa_soE.Text = RSA_soE.ToString();
+                                F_rsa_soD.Text = RSA_soD.ToString();
+                                F_rsa_soN.Text = RSA_soN.ToString();
+                                F_rsa_soP.Text = RSA_soP.ToString();
+                                F_rsa_soQ.Text = RSA_soQ.ToString();
+                                F_rsa_d_dau = 1;
+                                F_rsa_TaoKhoa.Enabled = false;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void btChonFileKy_RSA_Click(object sender, EventArgs e)
@@ -171,7 +217,7 @@ namespace BMANM06
                         fsFileDauVao.Close();
                         fsFileDauVao.Dispose();
                         F_rsa_d_dau = 2;
-                        MessageBox.Show("Thực hiện ký thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thực hiện ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btThucHienKy_RSA.Enabled = false;
                     }
                 }
@@ -196,7 +242,7 @@ namespace BMANM06
             {
                 if (!File.Exists(txtDuongDanFileXacThuc_RSA.Text))
                 {
-                    MessageBox.Show("Bạn chưa chọn Tài liệu kiểm tra chữ ký", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bạn chưa chọn tài liệu kiểm tra chữ ký", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (File.Exists(txtDuongDanFileXacThuc_RSA.Text))
                 {
@@ -213,12 +259,12 @@ namespace BMANM06
 
                     if (result == 0)
                     {
-                        MessageBox.Show("Tài liệu gửi đến không bị chỉnh sửa gì", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Tài liệu gửi đến không bị chỉnh sửa gì!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btKiemTraXacThuc_RSA.Enabled = false;
                     }
                     else
                     {
-                        MessageBox.Show("Tài liệu gửi đến đã bị thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tài liệu gửi đến đã bị thay đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         btKiemTraXacThuc_RSA.Enabled = false;
                     }
                     fsFileDauVao.Close();
@@ -228,7 +274,7 @@ namespace BMANM06
             }
             else
             {
-                MessageBox.Show("Chưa thực hiện ký và gửi file ký", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Chưa thực hiện ký và gửi file ký!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btKiemTraXacThuc_RSA.Enabled = false;
             }
         }
@@ -253,6 +299,11 @@ namespace BMANM06
             {
                 e.Cancel = true;
             }
+        }
+
+        private void RSASignForm_Load(object sender, EventArgs e)
+        {
+            F_rsa_soPhiN.Enabled = F_rsa_soN.Enabled = F_rsa_soE.Enabled = F_rsa_soD.Enabled = false;
         }
 
         #region Code chữ ký RSA
