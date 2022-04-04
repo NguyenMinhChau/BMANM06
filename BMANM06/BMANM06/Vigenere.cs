@@ -96,7 +96,7 @@ namespace BMANM06
 
             }
             if (txtKey.Text.Length < txtPlainText.Text.Length) {
-                MessageBox.Show("Vui lòng nhập khóa có độ dài bằng độ dài của KEY", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập KEY có độ dài bằng độ dài của chuỗi cần mã hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (txtPlainText.Text == "" || txtKey.Text == "")
             {
