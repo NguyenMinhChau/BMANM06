@@ -134,6 +134,9 @@ namespace BMANM06
                                     RSA_d_dau = 1;
                                     //bt_taokhoaTuychonMoi.Visible = true;
                                     rsa_TaoKhoa.Enabled = false;
+                                    rd_tcRSA.Enabled = false;
+                                    rd_tdRSA.Enabled = false;
+                                    rsa_btMaHoa.Enabled = true;
                                 }
                             }
                         }
