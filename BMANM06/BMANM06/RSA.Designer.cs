@@ -119,7 +119,7 @@ namespace BMANM06
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 175);
@@ -127,17 +127,21 @@ namespace BMANM06
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.ForeColor = System.Drawing.Color.Red;
             this.btnReset.Location = new System.Drawing.Point(460, 7);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(196, 34);
+            this.btnReset.Size = new System.Drawing.Size(196, 44);
             this.btnReset.TabIndex = 15;
             this.btnReset.Text = "Reset Form";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnOpenFile
             // 
+            this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenFile.Location = new System.Drawing.Point(494, 123);
             this.btnOpenFile.Name = "btnOpenFile";
             this.btnOpenFile.Size = new System.Drawing.Size(112, 34);
@@ -148,6 +152,7 @@ namespace BMANM06
             // 
             // btnGenerateKeyAuto
             // 
+            this.btnGenerateKeyAuto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerateKeyAuto.Location = new System.Drawing.Point(376, 57);
             this.btnGenerateKeyAuto.Name = "btnGenerateKeyAuto";
             this.btnGenerateKeyAuto.Size = new System.Drawing.Size(230, 34);
@@ -161,14 +166,14 @@ namespace BMANM06
             this.cbKeyLength.FormattingEnabled = true;
             this.cbKeyLength.Location = new System.Drawing.Point(156, 57);
             this.cbKeyLength.Name = "cbKeyLength";
-            this.cbKeyLength.Size = new System.Drawing.Size(212, 28);
+            this.cbKeyLength.Size = new System.Drawing.Size(212, 33);
             this.cbKeyLength.TabIndex = 4;
             // 
             // txtFileKey
             // 
-            this.txtFileKey.Location = new System.Drawing.Point(156, 123);
+            this.txtFileKey.Location = new System.Drawing.Point(184, 123);
             this.txtFileKey.Name = "txtFileKey";
-            this.txtFileKey.Size = new System.Drawing.Size(332, 28);
+            this.txtFileKey.Size = new System.Drawing.Size(304, 33);
             this.txtFileKey.TabIndex = 3;
             // 
             // label3
@@ -176,7 +181,7 @@ namespace BMANM06
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(33, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 20);
+            this.label3.Size = new System.Drawing.Size(145, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "File Key (Xml)";
             // 
@@ -185,7 +190,7 @@ namespace BMANM06
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(33, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Độ dài Key";
             // 
@@ -209,7 +214,7 @@ namespace BMANM06
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel2.Location = new System.Drawing.Point(3, 184);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(663, 261);
@@ -217,23 +222,23 @@ namespace BMANM06
             // 
             // txtMuGiaiMa
             // 
-            this.txtMuGiaiMa.Location = new System.Drawing.Point(163, 190);
+            this.txtMuGiaiMa.Location = new System.Drawing.Point(197, 190);
             this.txtMuGiaiMa.Name = "txtMuGiaiMa";
-            this.txtMuGiaiMa.Size = new System.Drawing.Size(398, 28);
+            this.txtMuGiaiMa.Size = new System.Drawing.Size(409, 33);
             this.txtMuGiaiMa.TabIndex = 7;
             // 
             // txtMuMaHoa
             // 
-            this.txtMuMaHoa.Location = new System.Drawing.Point(162, 131);
+            this.txtMuMaHoa.Location = new System.Drawing.Point(197, 131);
             this.txtMuMaHoa.Name = "txtMuMaHoa";
-            this.txtMuMaHoa.Size = new System.Drawing.Size(398, 28);
+            this.txtMuMaHoa.Size = new System.Drawing.Size(409, 33);
             this.txtMuMaHoa.TabIndex = 6;
             // 
             // txtModule
             // 
-            this.txtModule.Location = new System.Drawing.Point(162, 67);
+            this.txtModule.Location = new System.Drawing.Point(197, 67);
             this.txtModule.Name = "txtModule";
-            this.txtModule.Size = new System.Drawing.Size(398, 28);
+            this.txtModule.Size = new System.Drawing.Size(409, 33);
             this.txtModule.TabIndex = 5;
             // 
             // label7
@@ -241,7 +246,7 @@ namespace BMANM06
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(28, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 20);
+            this.label7.Size = new System.Drawing.Size(148, 25);
             this.label7.TabIndex = 4;
             this.label7.Text = "Mũ giải mã (D)";
             // 
@@ -250,7 +255,7 @@ namespace BMANM06
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(28, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 20);
+            this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Mũ mã hóa (E)";
             // 
@@ -259,7 +264,7 @@ namespace BMANM06
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(28, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
+            this.label5.Size = new System.Drawing.Size(116, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Module (N)";
             // 
@@ -290,7 +295,7 @@ namespace BMANM06
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel3.Location = new System.Drawing.Point(3, 451);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(663, 321);
@@ -299,6 +304,7 @@ namespace BMANM06
             // labelNotifiupdate
             // 
             this.labelNotifiupdate.AutoSize = true;
+            this.labelNotifiupdate.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelNotifiupdate.Location = new System.Drawing.Point(12, 280);
             this.labelNotifiupdate.Name = "labelNotifiupdate";
             this.labelNotifiupdate.Size = new System.Drawing.Size(87, 20);
@@ -310,7 +316,7 @@ namespace BMANM06
             this.labelNotifi.AutoSize = true;
             this.labelNotifi.Location = new System.Drawing.Point(35, 280);
             this.labelNotifi.Name = "labelNotifi";
-            this.labelNotifi.Size = new System.Drawing.Size(0, 20);
+            this.labelNotifi.Size = new System.Drawing.Size(0, 25);
             this.labelNotifi.TabIndex = 13;
             this.labelNotifi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -323,6 +329,7 @@ namespace BMANM06
             // 
             // btnDecrypt
             // 
+            this.btnDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDecrypt.Location = new System.Drawing.Point(311, 203);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(112, 34);
@@ -333,6 +340,7 @@ namespace BMANM06
             // 
             // btnEncrypt
             // 
+            this.btnEncrypt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncrypt.Location = new System.Drawing.Point(138, 203);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(112, 34);
@@ -343,6 +351,7 @@ namespace BMANM06
             // 
             // btnOpenFolder
             // 
+            this.btnOpenFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenFolder.Location = new System.Drawing.Point(475, 173);
             this.btnOpenFolder.Name = "btnOpenFolder";
             this.btnOpenFolder.Size = new System.Drawing.Size(133, 34);
@@ -353,6 +362,7 @@ namespace BMANM06
             // 
             // btnSelectFolderOut
             // 
+            this.btnSelectFolderOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectFolderOut.Location = new System.Drawing.Point(475, 133);
             this.btnSelectFolderOut.Name = "btnSelectFolderOut";
             this.btnSelectFolderOut.Size = new System.Drawing.Size(133, 34);
@@ -363,6 +373,7 @@ namespace BMANM06
             // 
             // btnSelectFolder
             // 
+            this.btnSelectFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectFolder.Location = new System.Drawing.Point(475, 68);
             this.btnSelectFolder.Name = "btnSelectFolder";
             this.btnSelectFolder.Size = new System.Drawing.Size(133, 34);
@@ -373,6 +384,7 @@ namespace BMANM06
             // 
             // btnSelectFile
             // 
+            this.btnSelectFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectFile.Location = new System.Drawing.Point(475, 28);
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.Size = new System.Drawing.Size(133, 34);
@@ -385,14 +397,14 @@ namespace BMANM06
             // 
             this.txtOutput.Location = new System.Drawing.Point(123, 155);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(346, 28);
+            this.txtOutput.Size = new System.Drawing.Size(346, 33);
             this.txtOutput.TabIndex = 5;
             // 
             // txtInput
             // 
             this.txtInput.Location = new System.Drawing.Point(123, 55);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(346, 28);
+            this.txtInput.Size = new System.Drawing.Size(346, 33);
             this.txtInput.TabIndex = 4;
             // 
             // label10
@@ -400,7 +412,7 @@ namespace BMANM06
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(35, 158);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.Size = new System.Drawing.Size(73, 25);
             this.label10.TabIndex = 3;
             this.label10.Text = "Output";
             // 
@@ -409,7 +421,7 @@ namespace BMANM06
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(35, 55);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 20);
+            this.label9.Size = new System.Drawing.Size(56, 25);
             this.label9.TabIndex = 2;
             this.label9.Text = "Input";
             // 
@@ -437,7 +449,7 @@ namespace BMANM06
             this.panel4.Controls.Add(this.txtFileKiemtra);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel4.Location = new System.Drawing.Point(3, 778);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(663, 321);
@@ -445,23 +457,23 @@ namespace BMANM06
             // 
             // txtSHA256
             // 
-            this.txtSHA256.Location = new System.Drawing.Point(113, 248);
+            this.txtSHA256.Location = new System.Drawing.Point(138, 248);
             this.txtSHA256.Name = "txtSHA256";
-            this.txtSHA256.Size = new System.Drawing.Size(437, 28);
+            this.txtSHA256.Size = new System.Drawing.Size(468, 33);
             this.txtSHA256.TabIndex = 14;
             // 
             // txtSHA1
             // 
-            this.txtSHA1.Location = new System.Drawing.Point(113, 202);
+            this.txtSHA1.Location = new System.Drawing.Point(138, 202);
             this.txtSHA1.Name = "txtSHA1";
-            this.txtSHA1.Size = new System.Drawing.Size(437, 28);
+            this.txtSHA1.Size = new System.Drawing.Size(468, 33);
             this.txtSHA1.TabIndex = 13;
             // 
             // txtMD5
             // 
-            this.txtMD5.Location = new System.Drawing.Point(113, 157);
+            this.txtMD5.Location = new System.Drawing.Point(138, 157);
             this.txtMD5.Name = "txtMD5";
-            this.txtMD5.Size = new System.Drawing.Size(437, 28);
+            this.txtMD5.Size = new System.Drawing.Size(468, 33);
             this.txtMD5.TabIndex = 12;
             // 
             // label15
@@ -469,7 +481,7 @@ namespace BMANM06
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(30, 254);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 20);
+            this.label15.Size = new System.Drawing.Size(88, 25);
             this.label15.TabIndex = 11;
             this.label15.Text = "SHA256";
             // 
@@ -478,7 +490,7 @@ namespace BMANM06
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(30, 205);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 20);
+            this.label14.Size = new System.Drawing.Size(66, 25);
             this.label14.TabIndex = 10;
             this.label14.Text = "SHA1";
             // 
@@ -487,12 +499,13 @@ namespace BMANM06
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(30, 157);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 20);
+            this.label13.Size = new System.Drawing.Size(58, 25);
             this.label13.TabIndex = 9;
             this.label13.Text = "MD5";
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(30, 103);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 34);
@@ -503,7 +516,8 @@ namespace BMANM06
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(417, 55);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(475, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 34);
             this.button1.TabIndex = 7;
@@ -515,7 +529,7 @@ namespace BMANM06
             // 
             this.txtFileKiemtra.Location = new System.Drawing.Point(86, 57);
             this.txtFileKiemtra.Name = "txtFileKiemtra";
-            this.txtFileKiemtra.Size = new System.Drawing.Size(312, 28);
+            this.txtFileKiemtra.Size = new System.Drawing.Size(383, 33);
             this.txtFileKiemtra.TabIndex = 5;
             // 
             // label12
@@ -523,7 +537,7 @@ namespace BMANM06
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(30, 57);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 20);
+            this.label12.Size = new System.Drawing.Size(46, 25);
             this.label12.TabIndex = 3;
             this.label12.Text = "File";
             // 
@@ -549,7 +563,7 @@ namespace BMANM06
             this.panel5.Controls.Add(this.txtPlainTextString);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel5.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel5.Location = new System.Drawing.Point(3, 1105);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(663, 498);
@@ -557,6 +571,7 @@ namespace BMANM06
             // 
             // btnDecryptString
             // 
+            this.btnDecryptString.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDecryptString.Location = new System.Drawing.Point(496, 341);
             this.btnDecryptString.Name = "btnDecryptString";
             this.btnDecryptString.Size = new System.Drawing.Size(112, 34);
@@ -567,6 +582,7 @@ namespace BMANM06
             // 
             // btnEncryptString
             // 
+            this.btnEncryptString.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncryptString.Location = new System.Drawing.Point(496, 199);
             this.btnEncryptString.Name = "btnEncryptString";
             this.btnEncryptString.Size = new System.Drawing.Size(112, 34);
@@ -588,7 +604,7 @@ namespace BMANM06
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(37, 348);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 20);
+            this.label19.Size = new System.Drawing.Size(94, 25);
             this.label19.TabIndex = 7;
             this.label19.Text = "PlainText";
             // 
@@ -605,7 +621,7 @@ namespace BMANM06
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(39, 206);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 20);
+            this.label18.Size = new System.Drawing.Size(103, 25);
             this.label18.TabIndex = 5;
             this.label18.Text = "Ciphertext";
             // 
@@ -622,7 +638,7 @@ namespace BMANM06
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(35, 64);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 20);
+            this.label17.Size = new System.Drawing.Size(94, 25);
             this.label17.TabIndex = 3;
             this.label17.Text = "PlainText";
             // 

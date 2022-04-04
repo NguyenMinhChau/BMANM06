@@ -125,6 +125,7 @@ namespace BMANM06
             // 
             // btnMaHoa
             // 
+            this.btnMaHoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMaHoa.Location = new System.Drawing.Point(649, 239);
             this.btnMaHoa.Name = "btnMaHoa";
@@ -136,6 +137,7 @@ namespace BMANM06
             // 
             // btnDecrypt
             // 
+            this.btnDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDecrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDecrypt.Location = new System.Drawing.Point(649, 386);
             this.btnDecrypt.Name = "btnDecrypt";
@@ -147,6 +149,7 @@ namespace BMANM06
             // 
             // btnGenerate
             // 
+            this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerate.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnGenerate.Location = new System.Drawing.Point(491, 34);
             this.btnGenerate.Name = "btnGenerate";
@@ -158,29 +161,35 @@ namespace BMANM06
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.ForeColor = System.Drawing.Color.Red;
             this.btnReset.Location = new System.Drawing.Point(661, 34);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(127, 34);
             this.btnReset.TabIndex = 11;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // LengthPlainText
             // 
             this.LengthPlainText.AutoSize = true;
+            this.LengthPlainText.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LengthPlainText.Location = new System.Drawing.Point(137, 110);
             this.LengthPlainText.Name = "LengthPlainText";
-            this.LengthPlainText.Size = new System.Drawing.Size(33, 25);
+            this.LengthPlainText.Size = new System.Drawing.Size(27, 20);
             this.LengthPlainText.TabIndex = 12;
             this.LengthPlainText.Text = "---";
             // 
             // LengthKey
             // 
             this.LengthKey.AutoSize = true;
+            this.LengthKey.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LengthKey.Location = new System.Drawing.Point(89, 70);
             this.LengthKey.Name = "LengthKey";
-            this.LengthKey.Size = new System.Drawing.Size(33, 25);
+            this.LengthKey.Size = new System.Drawing.Size(27, 20);
             this.LengthKey.TabIndex = 13;
             this.LengthKey.Text = "---";
             // 
