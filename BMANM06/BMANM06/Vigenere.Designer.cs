@@ -82,6 +82,7 @@ namespace BMANM06
             this.txtPlainText.Location = new System.Drawing.Point(28, 138);
             this.txtPlainText.Multiline = true;
             this.txtPlainText.Name = "txtPlainText";
+            this.txtPlainText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPlainText.Size = new System.Drawing.Size(738, 88);
             this.txtPlainText.TabIndex = 3;
             this.txtPlainText.TextChanged += new System.EventHandler(this.txtPlainText_TextChanged);
@@ -102,6 +103,7 @@ namespace BMANM06
             this.txtCiphertext.Location = new System.Drawing.Point(28, 279);
             this.txtCiphertext.Multiline = true;
             this.txtCiphertext.Name = "txtCiphertext";
+            this.txtCiphertext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCiphertext.Size = new System.Drawing.Size(738, 88);
             this.txtCiphertext.TabIndex = 5;
             // 
@@ -121,6 +123,7 @@ namespace BMANM06
             this.txtDecrypt.Location = new System.Drawing.Point(28, 426);
             this.txtDecrypt.Multiline = true;
             this.txtDecrypt.Name = "txtDecrypt";
+            this.txtDecrypt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDecrypt.Size = new System.Drawing.Size(738, 88);
             this.txtDecrypt.TabIndex = 7;
             // 
