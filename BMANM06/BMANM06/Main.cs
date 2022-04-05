@@ -45,5 +45,17 @@ namespace BMANM06
             var form = new RSASignForm();
             form.Show();
         }
+
+        private void aboutRSA_Click(object sender, EventArgs e)
+        {
+            var form = new AboutRSAForm();
+            form.Show();
+        }
+
+        private void aboutVigenere_Click(object sender, EventArgs e)
+        {
+            var form = new AboutVigenereForm();
+            form.Show();
+        }
     }
 }

@@ -32,9 +32,11 @@ namespace BMANM06
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.rSAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vigenereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RSADecrypt = new System.Windows.Forms.ToolStripMenuItem();
             this.RSAChuKySo = new System.Windows.Forms.ToolStripMenuItem();
+            this.vigenereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutRSA = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutVigenere = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -46,12 +48,14 @@ namespace BMANM06
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rSAToolStripMenuItem,
-            this.vigenereToolStripMenuItem,
             this.RSADecrypt,
-            this.RSAChuKySo});
+            this.RSAChuKySo,
+            this.vigenereToolStripMenuItem,
+            this.aboutRSA,
+            this.aboutVigenere});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,23 +63,15 @@ namespace BMANM06
             // 
             this.rSAToolStripMenuItem.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.rSAToolStripMenuItem.Name = "rSAToolStripMenuItem";
-            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
+            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
             this.rSAToolStripMenuItem.Text = "RSA";
             this.rSAToolStripMenuItem.Click += new System.EventHandler(this.rSAToolStripMenuItem_Click);
-            // 
-            // vigenereToolStripMenuItem
-            // 
-            this.vigenereToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.vigenereToolStripMenuItem.Name = "vigenereToolStripMenuItem";
-            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(107, 27);
-            this.vigenereToolStripMenuItem.Text = "Vigenere ";
-            this.vigenereToolStripMenuItem.Click += new System.EventHandler(this.vigenereToolStripMenuItem_Click);
             // 
             // RSADecrypt
             // 
             this.RSADecrypt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.RSADecrypt.Name = "RSADecrypt";
-            this.RSADecrypt.Size = new System.Drawing.Size(137, 27);
+            this.RSADecrypt.Size = new System.Drawing.Size(137, 28);
             this.RSADecrypt.Text = "RSA Mã Hóa";
             this.RSADecrypt.Click += new System.EventHandler(this.RSADecrypt_Click);
             // 
@@ -83,9 +79,34 @@ namespace BMANM06
             // 
             this.RSAChuKySo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.RSAChuKySo.Name = "RSAChuKySo";
-            this.RSAChuKySo.Size = new System.Drawing.Size(160, 27);
+            this.RSAChuKySo.Size = new System.Drawing.Size(160, 28);
             this.RSAChuKySo.Text = "RSA Chữ Ký Số";
             this.RSAChuKySo.Click += new System.EventHandler(this.RSAChuKySo_Click);
+            // 
+            // vigenereToolStripMenuItem
+            // 
+            this.vigenereToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.vigenereToolStripMenuItem.Name = "vigenereToolStripMenuItem";
+            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.vigenereToolStripMenuItem.Text = "Vigenere ";
+            this.vigenereToolStripMenuItem.Click += new System.EventHandler(this.vigenereToolStripMenuItem_Click);
+            // 
+            // aboutRSA
+            // 
+            this.aboutRSA.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.aboutRSA.ForeColor = System.Drawing.Color.DarkViolet;
+            this.aboutRSA.Name = "aboutRSA";
+            this.aboutRSA.Size = new System.Drawing.Size(121, 28);
+            this.aboutRSA.Text = "About RSA";
+            this.aboutRSA.Click += new System.EventHandler(this.aboutRSA_Click);
+            // 
+            // aboutVigenere
+            // 
+            this.aboutVigenere.ForeColor = System.Drawing.Color.DarkViolet;
+            this.aboutVigenere.Name = "aboutVigenere";
+            this.aboutVigenere.Size = new System.Drawing.Size(158, 28);
+            this.aboutVigenere.Text = "About Vigenere";
+            this.aboutVigenere.Click += new System.EventHandler(this.aboutVigenere_Click);
             // 
             // listBox1
             // 
@@ -127,7 +148,7 @@ namespace BMANM06
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thuật toán mã hóa RSA & Vigenere | BMANM06_COMP104901 ";
+            this.Text = "Thuật toán mã hóa RSA & Vigenere | Nhóm: BMANM06";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -145,6 +166,8 @@ namespace BMANM06
         private System.Windows.Forms.ToolStripMenuItem RSADecrypt;
         private System.Windows.Forms.ToolStripMenuItem RSAChuKySo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem aboutRSA;
+        private System.Windows.Forms.ToolStripMenuItem aboutVigenere;
     }
 }
 

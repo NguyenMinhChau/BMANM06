@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_LastSelectedProfileId>C:\Users\NGUYENMINHCHAU\OneDrive\Documents\4501104023_BMANM_COMP104901\BMANM06_COMP104901\BMANM06\BMANM06\Properties\PublishProfiles\ClickOnceProfile2.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>C:\Users\NGUYENMINHCHAU\OneDrive\Documents\4501104023_BMANM_COMP104901\BMANM06_COMP104901\BMANM06\BMANM06\Properties\PublishProfiles\ClickOnceProfile1.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AboutRSAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AboutVigenereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>

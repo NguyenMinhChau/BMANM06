@@ -469,7 +469,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSASignForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RSASignForm | BMANM06_COMP104901";
+            this.Text = "RSA Chữ Ký Số | Nhóm: BMANM06";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSASignForm_FormClosing);
             this.Load += new System.EventHandler(this.RSASignForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

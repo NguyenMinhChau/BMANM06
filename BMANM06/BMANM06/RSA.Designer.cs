@@ -706,7 +706,7 @@ namespace BMANM06
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RSA | BMANM06_COMP104901";
+            this.Text = "RSA | Nhóm: BMANM06";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSA_FormClosing_1);
             this.Load += new System.EventHandler(this.RSA_Load_1);
             this.flowLayoutPanel1.ResumeLayout(false);

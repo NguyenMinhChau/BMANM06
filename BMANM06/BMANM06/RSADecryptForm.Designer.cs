@@ -526,7 +526,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSADecryptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RSADecryptForm | BMANM06_COMP104901";
+            this.Text = "RSA Mã Hóa | Nhóm: BMANM06";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RSADecryptForm_FormClosing);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
