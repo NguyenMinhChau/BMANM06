@@ -283,7 +283,7 @@
             // 
             this.F_rsa_TaoKhoa.BackColor = System.Drawing.Color.NavajoWhite;
             this.F_rsa_TaoKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.F_rsa_TaoKhoa.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.F_rsa_TaoKhoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.F_rsa_TaoKhoa.ForeColor = System.Drawing.Color.Red;
             this.F_rsa_TaoKhoa.Location = new System.Drawing.Point(3, 547);
             this.F_rsa_TaoKhoa.Name = "F_rsa_TaoKhoa";
@@ -308,24 +308,28 @@
             // 
             // btThucHienKy_RSA
             // 
-            this.btThucHienKy_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btThucHienKy_RSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(105)))), ((int)(((byte)(189)))));
+            this.btThucHienKy_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btThucHienKy_RSA.ForeColor = System.Drawing.Color.White;
             this.btThucHienKy_RSA.Location = new System.Drawing.Point(353, 80);
             this.btThucHienKy_RSA.Name = "btThucHienKy_RSA";
             this.btThucHienKy_RSA.Size = new System.Drawing.Size(261, 34);
             this.btThucHienKy_RSA.TabIndex = 2;
             this.btThucHienKy_RSA.Text = "Thực hiện ký lên văn bản";
-            this.btThucHienKy_RSA.UseVisualStyleBackColor = true;
+            this.btThucHienKy_RSA.UseVisualStyleBackColor = false;
             this.btThucHienKy_RSA.Click += new System.EventHandler(this.btThucHienKy_RSA_Click);
             // 
             // btChonFileKy_RSA
             // 
-            this.btChonFileKy_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btChonFileKy_RSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btChonFileKy_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChonFileKy_RSA.ForeColor = System.Drawing.Color.White;
             this.btChonFileKy_RSA.Location = new System.Drawing.Point(494, 40);
             this.btChonFileKy_RSA.Name = "btChonFileKy_RSA";
             this.btChonFileKy_RSA.Size = new System.Drawing.Size(120, 34);
             this.btChonFileKy_RSA.TabIndex = 1;
             this.btChonFileKy_RSA.Text = "Open file";
-            this.btChonFileKy_RSA.UseVisualStyleBackColor = true;
+            this.btChonFileKy_RSA.UseVisualStyleBackColor = false;
             this.btChonFileKy_RSA.Click += new System.EventHandler(this.btChonFileKy_RSA_Click);
             // 
             // txtDuongDanFileKy_RSA
@@ -372,24 +376,28 @@
             // 
             // btKiemTraXacThuc_RSA
             // 
-            this.btKiemTraXacThuc_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btKiemTraXacThuc_RSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(105)))), ((int)(((byte)(189)))));
+            this.btKiemTraXacThuc_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btKiemTraXacThuc_RSA.ForeColor = System.Drawing.Color.White;
             this.btKiemTraXacThuc_RSA.Location = new System.Drawing.Point(265, 79);
             this.btKiemTraXacThuc_RSA.Name = "btKiemTraXacThuc_RSA";
             this.btKiemTraXacThuc_RSA.Size = new System.Drawing.Size(349, 34);
             this.btKiemTraXacThuc_RSA.TabIndex = 3;
             this.btKiemTraXacThuc_RSA.Text = "Kiểm tra xác thực toàn vẹn dữ liệu";
-            this.btKiemTraXacThuc_RSA.UseVisualStyleBackColor = true;
+            this.btKiemTraXacThuc_RSA.UseVisualStyleBackColor = false;
             this.btKiemTraXacThuc_RSA.Click += new System.EventHandler(this.btKiemTraXacThuc_RSA_Click);
             // 
             // btChonFileXacThuc_RSA
             // 
-            this.btChonFileXacThuc_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btChonFileXacThuc_RSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btChonFileXacThuc_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChonFileXacThuc_RSA.ForeColor = System.Drawing.Color.White;
             this.btChonFileXacThuc_RSA.Location = new System.Drawing.Point(494, 39);
             this.btChonFileXacThuc_RSA.Name = "btChonFileXacThuc_RSA";
             this.btChonFileXacThuc_RSA.Size = new System.Drawing.Size(120, 34);
             this.btChonFileXacThuc_RSA.TabIndex = 2;
             this.btChonFileXacThuc_RSA.Text = "Open file";
-            this.btChonFileXacThuc_RSA.UseVisualStyleBackColor = true;
+            this.btChonFileXacThuc_RSA.UseVisualStyleBackColor = false;
             this.btChonFileXacThuc_RSA.Click += new System.EventHandler(this.btChonFileXacThuc_RSA_Click);
             // 
             // txtDuongDanFileXacThuc_RSA
@@ -416,11 +424,11 @@
             // btThoatEF_RSA
             // 
             this.btThoatEF_RSA.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btThoatEF_RSA.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btThoatEF_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btThoatEF_RSA.ForeColor = System.Drawing.Color.Red;
-            this.btThoatEF_RSA.Location = new System.Drawing.Point(479, 39);
+            this.btThoatEF_RSA.Location = new System.Drawing.Point(494, 39);
             this.btThoatEF_RSA.Name = "btThoatEF_RSA";
-            this.btThoatEF_RSA.Size = new System.Drawing.Size(135, 34);
+            this.btThoatEF_RSA.Size = new System.Drawing.Size(120, 34);
             this.btThoatEF_RSA.TabIndex = 2;
             this.btThoatEF_RSA.Text = "Thoát";
             this.btThoatEF_RSA.UseVisualStyleBackColor = false;
@@ -428,24 +436,28 @@
             // 
             // btTaoChuKymoi_RSA
             // 
-            this.btTaoChuKymoi_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btTaoChuKymoi_RSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(137)))), ((int)(((byte)(167)))));
+            this.btTaoChuKymoi_RSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btTaoChuKymoi_RSA.ForeColor = System.Drawing.Color.White;
             this.btTaoChuKymoi_RSA.Location = new System.Drawing.Point(230, 39);
             this.btTaoChuKymoi_RSA.Name = "btTaoChuKymoi_RSA";
-            this.btTaoChuKymoi_RSA.Size = new System.Drawing.Size(243, 34);
+            this.btTaoChuKymoi_RSA.Size = new System.Drawing.Size(258, 34);
             this.btTaoChuKymoi_RSA.TabIndex = 1;
             this.btTaoChuKymoi_RSA.Text = "Tạo mới chữ ký mã hóa";
-            this.btTaoChuKymoi_RSA.UseVisualStyleBackColor = true;
+            this.btTaoChuKymoi_RSA.UseVisualStyleBackColor = false;
             this.btTaoChuKymoi_RSA.Click += new System.EventHandler(this.btTaoChuKymoi_RSA_Click);
             // 
             // btChonVBMoiRSA
             // 
-            this.btChonVBMoiRSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btChonVBMoiRSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(250)))));
+            this.btChonVBMoiRSA.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChonVBMoiRSA.ForeColor = System.Drawing.Color.White;
             this.btChonVBMoiRSA.Location = new System.Drawing.Point(9, 39);
             this.btChonVBMoiRSA.Name = "btChonVBMoiRSA";
             this.btChonVBMoiRSA.Size = new System.Drawing.Size(215, 34);
             this.btChonVBMoiRSA.TabIndex = 0;
             this.btChonVBMoiRSA.Text = "Chọn văn bản mới";
-            this.btChonVBMoiRSA.UseVisualStyleBackColor = true;
+            this.btChonVBMoiRSA.UseVisualStyleBackColor = false;
             this.btChonVBMoiRSA.Click += new System.EventHandler(this.btChonVBMoiRSA_Click);
             // 
             // RSASignForm
@@ -454,6 +466,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 501);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSASignForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RSASignForm | BMANM06_COMP104901";

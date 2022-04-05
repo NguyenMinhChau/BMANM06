@@ -29,6 +29,7 @@ namespace BMANM06
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RSA));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReset = new System.Windows.Forms.Button();
@@ -141,24 +142,30 @@ namespace BMANM06
             // 
             // btnOpenFile
             // 
+            this.btnOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
             this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenFile.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOpenFile.ForeColor = System.Drawing.Color.White;
             this.btnOpenFile.Location = new System.Drawing.Point(494, 123);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(112, 34);
+            this.btnOpenFile.Size = new System.Drawing.Size(139, 34);
             this.btnOpenFile.TabIndex = 6;
-            this.btnOpenFile.Text = "Open";
-            this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Text = "Open File";
+            this.btnOpenFile.UseVisualStyleBackColor = false;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click_1);
             // 
             // btnGenerateKeyAuto
             // 
+            this.btnGenerateKeyAuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.btnGenerateKeyAuto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerateKeyAuto.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerateKeyAuto.ForeColor = System.Drawing.Color.White;
             this.btnGenerateKeyAuto.Location = new System.Drawing.Point(376, 57);
             this.btnGenerateKeyAuto.Name = "btnGenerateKeyAuto";
-            this.btnGenerateKeyAuto.Size = new System.Drawing.Size(230, 34);
+            this.btnGenerateKeyAuto.Size = new System.Drawing.Size(230, 33);
             this.btnGenerateKeyAuto.TabIndex = 5;
             this.btnGenerateKeyAuto.Text = "Tạo Key tự động";
-            this.btnGenerateKeyAuto.UseVisualStyleBackColor = true;
+            this.btnGenerateKeyAuto.UseVisualStyleBackColor = false;
             this.btnGenerateKeyAuto.Click += new System.EventHandler(this.btnGenerateKeyAuto_Click);
             // 
             // cbKeyLength
@@ -331,68 +338,86 @@ namespace BMANM06
             // 
             // btnDecrypt
             // 
+            this.btnDecrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             this.btnDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDecrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDecrypt.ForeColor = System.Drawing.Color.White;
             this.btnDecrypt.Location = new System.Drawing.Point(311, 203);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(112, 34);
             this.btnDecrypt.TabIndex = 11;
             this.btnDecrypt.Text = "Decrypt";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.UseVisualStyleBackColor = false;
             this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnEncrypt
             // 
+            this.btnEncrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(65)))), ((int)(((byte)(24)))));
             this.btnEncrypt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEncrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEncrypt.ForeColor = System.Drawing.Color.White;
             this.btnEncrypt.Location = new System.Drawing.Point(138, 203);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(112, 34);
             this.btnEncrypt.TabIndex = 10;
             this.btnEncrypt.Text = "Encrypt";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.UseVisualStyleBackColor = false;
             this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // btnOpenFolder
             // 
+            this.btnOpenFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
             this.btnOpenFolder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenFolder.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOpenFolder.ForeColor = System.Drawing.Color.White;
             this.btnOpenFolder.Location = new System.Drawing.Point(475, 173);
             this.btnOpenFolder.Name = "btnOpenFolder";
-            this.btnOpenFolder.Size = new System.Drawing.Size(133, 34);
+            this.btnOpenFolder.Size = new System.Drawing.Size(158, 34);
             this.btnOpenFolder.TabIndex = 9;
-            this.btnOpenFolder.Text = "Open Folder";
-            this.btnOpenFolder.UseVisualStyleBackColor = true;
+            this.btnOpenFolder.Text = "Select Folder";
+            this.btnOpenFolder.UseVisualStyleBackColor = false;
             this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click_1);
             // 
             // btnSelectFolderOut
             // 
+            this.btnSelectFolderOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(126)))), ((int)(((byte)(176)))));
             this.btnSelectFolderOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectFolderOut.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSelectFolderOut.ForeColor = System.Drawing.Color.White;
             this.btnSelectFolderOut.Location = new System.Drawing.Point(475, 133);
             this.btnSelectFolderOut.Name = "btnSelectFolderOut";
-            this.btnSelectFolderOut.Size = new System.Drawing.Size(133, 34);
+            this.btnSelectFolderOut.Size = new System.Drawing.Size(158, 34);
             this.btnSelectFolderOut.TabIndex = 8;
             this.btnSelectFolderOut.Text = "Select Folder";
-            this.btnSelectFolderOut.UseVisualStyleBackColor = true;
+            this.btnSelectFolderOut.UseVisualStyleBackColor = false;
             this.btnSelectFolderOut.Click += new System.EventHandler(this.btnSelectFolderOut_Click_1);
             // 
             // btnSelectFolder
             // 
+            this.btnSelectFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
             this.btnSelectFolder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectFolder.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSelectFolder.ForeColor = System.Drawing.Color.White;
             this.btnSelectFolder.Location = new System.Drawing.Point(475, 68);
             this.btnSelectFolder.Name = "btnSelectFolder";
-            this.btnSelectFolder.Size = new System.Drawing.Size(133, 34);
+            this.btnSelectFolder.Size = new System.Drawing.Size(158, 34);
             this.btnSelectFolder.TabIndex = 7;
             this.btnSelectFolder.Text = "Select Folder";
-            this.btnSelectFolder.UseVisualStyleBackColor = true;
+            this.btnSelectFolder.UseVisualStyleBackColor = false;
             this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click_1);
             // 
             // btnSelectFile
             // 
+            this.btnSelectFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(126)))), ((int)(((byte)(176)))));
             this.btnSelectFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectFile.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSelectFile.ForeColor = System.Drawing.Color.White;
             this.btnSelectFile.Location = new System.Drawing.Point(475, 28);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(133, 34);
+            this.btnSelectFile.Size = new System.Drawing.Size(158, 34);
             this.btnSelectFile.TabIndex = 6;
             this.btnSelectFile.Text = "Select File";
-            this.btnSelectFile.UseVisualStyleBackColor = true;
+            this.btnSelectFile.UseVisualStyleBackColor = false;
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click_1);
             // 
             // txtOutput
@@ -508,24 +533,30 @@ namespace BMANM06
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(50)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(30, 103);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 34);
             this.button3.TabIndex = 8;
             this.button3.Text = "Check File";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(475, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 34);
             this.button1.TabIndex = 7;
             this.button1.Text = "Open File";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtFileKiemtra
@@ -575,24 +606,30 @@ namespace BMANM06
             // 
             // btnDecryptString
             // 
+            this.btnDecryptString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             this.btnDecryptString.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDecryptString.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDecryptString.ForeColor = System.Drawing.Color.White;
             this.btnDecryptString.Location = new System.Drawing.Point(496, 341);
             this.btnDecryptString.Name = "btnDecryptString";
             this.btnDecryptString.Size = new System.Drawing.Size(112, 34);
             this.btnDecryptString.TabIndex = 10;
             this.btnDecryptString.Text = "Decrypt";
-            this.btnDecryptString.UseVisualStyleBackColor = true;
+            this.btnDecryptString.UseVisualStyleBackColor = false;
             this.btnDecryptString.Click += new System.EventHandler(this.btnDecryptString_Click);
             // 
             // btnEncryptString
             // 
+            this.btnEncryptString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(65)))), ((int)(((byte)(24)))));
             this.btnEncryptString.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEncryptString.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEncryptString.ForeColor = System.Drawing.Color.White;
             this.btnEncryptString.Location = new System.Drawing.Point(496, 199);
             this.btnEncryptString.Name = "btnEncryptString";
             this.btnEncryptString.Size = new System.Drawing.Size(112, 34);
             this.btnEncryptString.TabIndex = 9;
             this.btnEncryptString.Text = "Encrypt";
-            this.btnEncryptString.UseVisualStyleBackColor = true;
+            this.btnEncryptString.UseVisualStyleBackColor = false;
             this.btnEncryptString.Click += new System.EventHandler(this.btnEncryptString_Click_1);
             // 
             // txtPlainTextStringDecrypt
@@ -663,6 +700,7 @@ namespace BMANM06
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 510);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RSA | BMANM06_COMP104901";

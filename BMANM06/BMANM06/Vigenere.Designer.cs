@@ -29,6 +29,7 @@ namespace BMANM06
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vigenere));
             this.label1 = new System.Windows.Forms.Label();
             this.txtKey = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -125,45 +126,51 @@ namespace BMANM06
             // 
             // btnMaHoa
             // 
+            this.btnMaHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(65)))), ((int)(((byte)(24)))));
             this.btnMaHoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMaHoa.ForeColor = System.Drawing.Color.White;
             this.btnMaHoa.Location = new System.Drawing.Point(649, 239);
             this.btnMaHoa.Name = "btnMaHoa";
             this.btnMaHoa.Size = new System.Drawing.Size(117, 34);
             this.btnMaHoa.TabIndex = 8;
             this.btnMaHoa.Text = "Encrypt";
-            this.btnMaHoa.UseVisualStyleBackColor = true;
+            this.btnMaHoa.UseVisualStyleBackColor = false;
             this.btnMaHoa.Click += new System.EventHandler(this.btnMaHoa_Click);
             // 
             // btnDecrypt
             // 
+            this.btnDecrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             this.btnDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDecrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDecrypt.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDecrypt.ForeColor = System.Drawing.Color.White;
             this.btnDecrypt.Location = new System.Drawing.Point(649, 386);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(117, 34);
             this.btnDecrypt.TabIndex = 9;
             this.btnDecrypt.Text = "Decrypt";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.UseVisualStyleBackColor = false;
             this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnGenerate
             // 
+            this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(137)))), ((int)(((byte)(204)))));
             this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerate.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerate.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerate.ForeColor = System.Drawing.Color.White;
             this.btnGenerate.Location = new System.Drawing.Point(491, 34);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(164, 34);
             this.btnGenerate.TabIndex = 10;
             this.btnGenerate.Text = "Generate Key";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnReset.ForeColor = System.Drawing.Color.Red;
             this.btnReset.Location = new System.Drawing.Point(661, 34);
             this.btnReset.Name = "btnReset";
@@ -212,6 +219,7 @@ namespace BMANM06
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtKey);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vigenere";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vigenere | BMANM06_COMP104901";

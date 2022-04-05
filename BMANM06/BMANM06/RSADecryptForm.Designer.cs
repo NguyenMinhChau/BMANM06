@@ -314,7 +314,7 @@
             // 
             this.rsa_TaoKhoa.BackColor = System.Drawing.Color.NavajoWhite;
             this.rsa_TaoKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_TaoKhoa.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_TaoKhoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rsa_TaoKhoa.ForeColor = System.Drawing.Color.Red;
             this.rsa_TaoKhoa.Location = new System.Drawing.Point(3, 586);
             this.rsa_TaoKhoa.Name = "rsa_TaoKhoa";
@@ -341,14 +341,16 @@
             // 
             // rsa_btMaHoa
             // 
+            this.rsa_btMaHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(65)))), ((int)(((byte)(24)))));
             this.rsa_btMaHoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_btMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rsa_btMaHoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_btMaHoa.ForeColor = System.Drawing.Color.White;
             this.rsa_btMaHoa.Location = new System.Drawing.Point(188, 308);
             this.rsa_btMaHoa.Name = "rsa_btMaHoa";
             this.rsa_btMaHoa.Size = new System.Drawing.Size(201, 34);
             this.rsa_btMaHoa.TabIndex = 10;
             this.rsa_btMaHoa.Text = "Thực hiện mã hóa";
-            this.rsa_btMaHoa.UseVisualStyleBackColor = true;
+            this.rsa_btMaHoa.UseVisualStyleBackColor = false;
             this.rsa_btMaHoa.Click += new System.EventHandler(this.rsa_btMaHoa_Click);
             // 
             // rsa_banMaHoaGuiDen
@@ -408,14 +410,16 @@
             // 
             // rsa_btGiaiMa
             // 
+            this.rsa_btGiaiMa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             this.rsa_btGiaiMa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_btGiaiMa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rsa_btGiaiMa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_btGiaiMa.ForeColor = System.Drawing.Color.White;
             this.rsa_btGiaiMa.Location = new System.Drawing.Point(188, 308);
             this.rsa_btGiaiMa.Name = "rsa_btGiaiMa";
             this.rsa_btGiaiMa.Size = new System.Drawing.Size(201, 34);
             this.rsa_btGiaiMa.TabIndex = 10;
             this.rsa_btGiaiMa.Text = "Thực hiện giải mã";
-            this.rsa_btGiaiMa.UseVisualStyleBackColor = true;
+            this.rsa_btGiaiMa.UseVisualStyleBackColor = false;
             this.rsa_btGiaiMa.Click += new System.EventHandler(this.rsa_btGiaiMa_Click);
             // 
             // rsa_banGiaiMa
@@ -475,7 +479,7 @@
             // 
             this.rsa_btThoat.BackColor = System.Drawing.Color.NavajoWhite;
             this.rsa_btThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_btThoat.Font = new System.Drawing.Font("Poor Richard", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_btThoat.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rsa_btThoat.ForeColor = System.Drawing.Color.Red;
             this.rsa_btThoat.Location = new System.Drawing.Point(464, 46);
             this.rsa_btThoat.Name = "rsa_btThoat";
@@ -487,26 +491,30 @@
             // 
             // rsa_maHoaBanRoMoi
             // 
+            this.rsa_maHoaBanRoMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(137)))), ((int)(((byte)(167)))));
             this.rsa_maHoaBanRoMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_maHoaBanRoMoi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rsa_maHoaBanRoMoi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_maHoaBanRoMoi.ForeColor = System.Drawing.Color.White;
             this.rsa_maHoaBanRoMoi.Location = new System.Drawing.Point(228, 46);
             this.rsa_maHoaBanRoMoi.Name = "rsa_maHoaBanRoMoi";
             this.rsa_maHoaBanRoMoi.Size = new System.Drawing.Size(230, 34);
             this.rsa_maHoaBanRoMoi.TabIndex = 1;
             this.rsa_maHoaBanRoMoi.Text = "Mã hóa bản rõ mới";
-            this.rsa_maHoaBanRoMoi.UseVisualStyleBackColor = true;
+            this.rsa_maHoaBanRoMoi.UseVisualStyleBackColor = false;
             this.rsa_maHoaBanRoMoi.Click += new System.EventHandler(this.rsa_maHoaBanRoMoi_Click);
             // 
             // rsa_TaoKhoaMoi
             // 
+            this.rsa_TaoKhoaMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(250)))));
             this.rsa_TaoKhoaMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rsa_TaoKhoaMoi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rsa_TaoKhoaMoi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rsa_TaoKhoaMoi.ForeColor = System.Drawing.Color.White;
             this.rsa_TaoKhoaMoi.Location = new System.Drawing.Point(9, 46);
             this.rsa_TaoKhoaMoi.Name = "rsa_TaoKhoaMoi";
             this.rsa_TaoKhoaMoi.Size = new System.Drawing.Size(213, 34);
             this.rsa_TaoKhoaMoi.TabIndex = 0;
             this.rsa_TaoKhoaMoi.Text = "Tạo khóa mới";
-            this.rsa_TaoKhoaMoi.UseVisualStyleBackColor = true;
+            this.rsa_TaoKhoaMoi.UseVisualStyleBackColor = false;
             this.rsa_TaoKhoaMoi.Click += new System.EventHandler(this.rsa_TaoKhoaMoi_Click);
             // 
             // RSADecryptForm
@@ -515,6 +523,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 485);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSADecryptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RSADecryptForm | BMANM06_COMP104901";
