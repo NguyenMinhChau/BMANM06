@@ -61,8 +61,16 @@
     <value>1. Tổng quan
 - Mật mã Vigenere là một phương pháp mã hóa văn bản bằng cách sử dụng xen kẽ một số phép mã hóa Caesar khác nhau dựa trên các chữ cái của một từ khóa. Nó là một dạng đơn giản của mật mã thay thế dùng nhiều bảng chữ cái.
 
-2. Cách giải mã Vigenere
+2. Cách mã hóa/giải mã Vigenere
+     a. Mã hóa
 - Để mã hóa, ta dùng một hình vuông Vigenere. Nó gồm 26 hàng, mỗi hàng dịch về bên trái một bước so với hàng phía trên, tạo thành 26 bảng mã Caesar. Trong quá trình mã hóa, tùy theo từ khóa mà mỗi thời điểm ta dùng một dòng khác nhau để mã hóa văn bản.
+- Ví dụ, ta có văn bản cần mã hóa như sau: ATTACKATDAWN
+- Người gửi lựa chọn một từ khóa và viết nó lặp lại nhiều lần trên một dòng đến khi số chữ cái trên dòng bằng số chữ cái trong thông điệp, với từ khóa "LEMON" thì: LEMONLEMONLE
+- Chữ cái đầu tiên của văn bản, A, được mã hóa bằng bảng bắt đầu với L (chữ cái đầu tiên của từ khóa). Nó sẽ được mã hóa thành chữ cái trên dòng L và cột A của hình vuông Vigenère, đó là chữ L. Tương tự như vậy, chữ cái thứ hai của văn bản sẽ được mã hóa bằng chữ cái thứ hai của từ khóa: chữ trên dòng E và cột T là X. Sau đây là bản mã:
++ Văn bản: ATTACKATDAWN
++ Từ khóa: LEMONLEMONLE
++ Bản mã: LXFOPVEFRNHR
+     b. Giải mã
 - Trước hết, ngoài mật mã thì ta còn cần từ khóa. Đầu tiên, ta lấy chữ cái đầu tiên của từ khóa, sau đó tìm chữ cái đó ở hàng ngang đầu tiên của bảng mã. Từ chữ cái tìm được, ta dóng xuống chữ cái cùng thứ tự của mã. Rồi ta di chuyển tới chữ cái tương ứng ở cột dọc đầu tiên từ trái sang phải. Dần dần ta sẽ giải hết mật mã.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901\\BMANM06\\BMANM06\\BMANM06.csproj": {}
+    "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901_SourceCode\\BMANM06\\BMANM06\\BMANM06.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901\\BMANM06\\BMANM06\\BMANM06.csproj": {
+    "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901_SourceCode\\BMANM06\\BMANM06\\BMANM06.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901\\BMANM06\\BMANM06\\BMANM06.csproj",
+        "projectUniqueName": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901_SourceCode\\BMANM06\\BMANM06\\BMANM06.csproj",
         "projectName": "BMANM06",
-        "projectPath": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901\\BMANM06\\BMANM06\\BMANM06.csproj",
+        "projectPath": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901_SourceCode\\BMANM06\\BMANM06\\BMANM06.csproj",
         "packagesPath": "C:\\Users\\NGUYENMINHCHAU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901\\BMANM06\\BMANM06\\obj\\",
+        "outputPath": "C:\\Users\\NGUYENMINHCHAU\\OneDrive\\Documents\\4501104023_BMANM_COMP104901\\BMANM06_COMP104901_SourceCode\\BMANM06\\BMANM06\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
