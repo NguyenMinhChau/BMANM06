@@ -86,6 +86,7 @@ namespace BMANM06
             this.txtPlainText.Size = new System.Drawing.Size(738, 88);
             this.txtPlainText.TabIndex = 3;
             this.txtPlainText.TextChanged += new System.EventHandler(this.txtPlainText_TextChanged);
+            this.txtPlainText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlainText_KeyPress);
             // 
             // label3
             // 
@@ -106,6 +107,7 @@ namespace BMANM06
             this.txtCiphertext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCiphertext.Size = new System.Drawing.Size(738, 88);
             this.txtCiphertext.TabIndex = 5;
+            this.txtCiphertext.TextChanged += new System.EventHandler(this.txtCiphertext_TextChanged);
             // 
             // label4
             // 
