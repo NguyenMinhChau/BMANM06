@@ -55,7 +55,7 @@ namespace BMANM06
             this.aboutVigenere});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +63,7 @@ namespace BMANM06
             // 
             this.rSAToolStripMenuItem.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.rSAToolStripMenuItem.Name = "rSAToolStripMenuItem";
-            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
+            this.rSAToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.rSAToolStripMenuItem.Text = "RSA";
             this.rSAToolStripMenuItem.Click += new System.EventHandler(this.rSAToolStripMenuItem_Click);
             // 
@@ -71,7 +71,7 @@ namespace BMANM06
             // 
             this.RSADecrypt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.RSADecrypt.Name = "RSADecrypt";
-            this.RSADecrypt.Size = new System.Drawing.Size(137, 28);
+            this.RSADecrypt.Size = new System.Drawing.Size(137, 27);
             this.RSADecrypt.Text = "RSA Mã Hóa";
             this.RSADecrypt.Click += new System.EventHandler(this.RSADecrypt_Click);
             // 
@@ -79,7 +79,7 @@ namespace BMANM06
             // 
             this.RSAChuKySo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.RSAChuKySo.Name = "RSAChuKySo";
-            this.RSAChuKySo.Size = new System.Drawing.Size(160, 28);
+            this.RSAChuKySo.Size = new System.Drawing.Size(160, 27);
             this.RSAChuKySo.Text = "RSA Chữ Ký Số";
             this.RSAChuKySo.Click += new System.EventHandler(this.RSAChuKySo_Click);
             // 
@@ -87,7 +87,7 @@ namespace BMANM06
             // 
             this.vigenereToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.vigenereToolStripMenuItem.Name = "vigenereToolStripMenuItem";
-            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.vigenereToolStripMenuItem.Size = new System.Drawing.Size(107, 27);
             this.vigenereToolStripMenuItem.Text = "Vigenere ";
             this.vigenereToolStripMenuItem.Click += new System.EventHandler(this.vigenereToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@ namespace BMANM06
             this.aboutRSA.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.aboutRSA.ForeColor = System.Drawing.Color.DarkViolet;
             this.aboutRSA.Name = "aboutRSA";
-            this.aboutRSA.Size = new System.Drawing.Size(121, 28);
+            this.aboutRSA.Size = new System.Drawing.Size(121, 27);
             this.aboutRSA.Text = "About RSA";
             this.aboutRSA.Click += new System.EventHandler(this.aboutRSA_Click);
             // 
@@ -104,7 +104,7 @@ namespace BMANM06
             // 
             this.aboutVigenere.ForeColor = System.Drawing.Color.DarkViolet;
             this.aboutVigenere.Name = "aboutVigenere";
-            this.aboutVigenere.Size = new System.Drawing.Size(158, 28);
+            this.aboutVigenere.Size = new System.Drawing.Size(158, 27);
             this.aboutVigenere.Text = "About Vigenere";
             this.aboutVigenere.Click += new System.EventHandler(this.aboutVigenere_Click);
             // 
@@ -114,12 +114,12 @@ namespace BMANM06
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 27;
             this.listBox1.Items.AddRange(new object[] {
-            "1. NGUYỄN MINH CHÂU \t-  \t4501104023",
-            "2. HỒ THỊ MỸ DUNG \t- \t4501104034",
-            "3. NGUYỄN TUYẾT NGÂN \t-\t4501104154",
-            "4. NGUYỄN DUY PHÚC \t- \t4501104179",
-            "5. VÕ THỊ TRÚC PHƯƠNG \t- \t4501104185",
-            "6. PHẠM THANH QUAN \t- \t4501104188"});
+            "1. NGUYỄN MINH CHÂU\t-    4501104023\t-     COMP104901",
+            "2. HỒ THỊ MỸ DUNG\t-    4501104034\t-     COMP104901",
+            "3. NGUYỄN TUYẾT NGÂN\t-    4501104154\t-     COMP104901",
+            "4. NGUYỄN DUY PHÚC\t-    4501104179\t-     COMP104901",
+            "5. VÕ THỊ TRÚC PHƯƠNG\t-    4501104185\t-     COMP104901",
+            "6. PHẠM THANH QUAN\t-    4501104188\t-     COMP104902"});
             this.listBox1.Location = new System.Drawing.Point(12, 86);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(776, 301);
@@ -140,7 +140,7 @@ namespace BMANM06
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 431);
+            this.ClientSize = new System.Drawing.Size(800, 408);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip1);
