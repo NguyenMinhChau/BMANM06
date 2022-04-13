@@ -59,6 +59,7 @@ namespace BMANM06
             {
                 btnMaHoa.Enabled = true;
                 btnGenerate.Enabled = true;
+                txtKey.Text = "";
             }
             LengthPlainText.Text = "Độ dài PlainText: " + txtPlainText.Text.Length + " kí tự.";
         }
